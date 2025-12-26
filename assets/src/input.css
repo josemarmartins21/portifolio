@@ -8,11 +8,11 @@
     }
 
     .barra {
-        @apply h-1.5 bg-orange-600 w-15;
+        @apply h-1.5 bg-orange-600 w-15 m-auto sm:m-0;
     }
 
     .card-projecto {
-        @apply basis-[320px] border border-orange-600;
+        @apply sm:basis-[320px] w-7/8 border border-orange-600;
     }
 
     .title-project {
@@ -24,19 +24,19 @@
     }
 
     .conteiner {
-        @apply w-250 m-auto ;
+        @apply sm:w-250 m-auto ;
     }
 
     .titulo-secao {
-        @apply text-3xl font-semibold mb-2.5;
+        @apply text-3xl font-semibold mb-2.5 text-center sm:text-left;
     }
 
     .card-skill {
-        @apply bg-slate-800 basis-60 p-5 h-[250px];
+        @apply bg-slate-800 sm:basis-60 w-4/5 p-5 h-[250px] text-center;
     }
 
     .title-skill {
-        @apply  font-semibold my-1.5 text-2xl;
+        @apply  font-semibold my-1.5 text-2xl ;
     }
     .icone {
         @apply text-3xl text-orange-600;
@@ -46,8 +46,8 @@
         @apply flex border-2 border-orange-600 p-5 gap-5 mb-5;
     }
 
-    .formacao-container {
-        @apply bg-slate-800 p-5;
+    .formacao-container, .experiencia-container {
+        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3;
     }
 }
 

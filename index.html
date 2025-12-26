@@ -14,12 +14,12 @@
 <body class=" bg-slate-900 h-screen text-white">
     <main class="pb-20">
         <section class="h-screen bg-[url(/assets/images/fundos/fundo-13.jpg)] bg-center bg-fixed">
-        <header class="flex justify-between p-6 items-center">
+        <header class="flex sm:justify-between gap-2.5 sm:gap-5 p-6 items-center sm:flex-row flex-col">
             <div>
                 <a href="#" class="text-orange-600 font-bold text-3xl font-title text-shadow-2xs text-shadow-black"><h1>Josimar Martins</h1></a>
             </div>
     
-            <nav>
+            <nav class="hidden sm:block">
                 <ul class="lista">
                     <li><a href="#">Home</a></li>
                     <li><a href="#" >Sobre</a></li>
@@ -30,7 +30,7 @@
             </nav>
     
             <div class="">
-                <a href="#" class="border transition border-orange-600 w-40 py-2 hover:bg-orange-600 text-center inline-block">Whatsapp</a>
+                <a href="#" class="border transition border-orange-600 w-40 py-2 sm:hover:bg-orange-600 text-center inline-block">Whatsapp</a>
             </div>
         </header>
             <div class="h-3/5 flex items-center justify-center flex-col">
@@ -38,20 +38,20 @@
                     <img src="assets/images/josimar.jpeg" alt="Josimar Martins" class="w-60 rounded-full">
                 </div>
                 <div class="p-4 text-center">
-                    <h2 class="text-orange-600 font-bold text-5xl text-shadow-black text-shadow-2xs">Josimar Martins</h2>
+                    <h2 class="text-orange-600 font-bold sm:text-3xl text-3xl text-shadow-black text-shadow-2xs">Josimar Martins</h2>
                     <p class="text-xl text-shadow-black text-shadow-2xs">Desenvolvedor backend e solucionador de problemas.</p>
                 </div>
             </div>
         </section><!-- Fim do hero -->
         <section class="mb-15 p-5 bg-slate-800">
-            <div class="flex w-250 m-auto justify-center items-center gap-2.5">
-                <div class="basis-md">
+            <div class="flex md:w-250 w-full m-auto sm:flex-row flex-col sm:justify-center  gap-2.5 items-center sm:gap-2.5">
+                <div class="basis-md sm:basis-sm">
                     <img src="assets/images/josimar-portrait.jpeg" alt="Josimar Martins" class="w-60 rounded-lg">
                 </div>
-                <div class="basis-md"> 
+                <div class="basis-full sm:basis-80"> 
                     <h2 class="text-4xl font-bold mb-2.5">Sobre mim</h2>
-                    <div class="barra"></div>
-                    <p class="my-2.5 text-zinc-400">
+                    <div class="h-1.5 bg-orange-600 w-15"></div>
+                    <p class="my-2.5 text-zinc-400 leading-7.5">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente excepturi a velit voluptatum, labore facere laudantium itaque debitis doloribus eligendi, numquam saepe nisi necessitatibus officia, distinctio ipsa consequuntur corporis. Quod!
                     </p>
                     <div class="border border-orange-600 h-44">
@@ -61,11 +61,11 @@
                 </div>
             </div>
         </section> <!-- Fim do sobre mim -->
-        <section class="conteiner pb-25">
+        <section class="conteiner pb-25 ">
             <h2 class="titulo-secao">Minhas Skills</h2>
-            <div class="barra"></div>
+            <div class="barra "></div>
 
-            <div class="flex justify-between py-7.5">
+            <div class="flex flex-col sm:flex-row sm:w-7/8  sm:m-auto gap-5 sm:items-stretch items-center py-7.5">
                 <div class="card-skill">
                     <div class="icone">
                         <i class="fa-brands fa-github icone"></i>
@@ -109,8 +109,8 @@
             <h2 class="titulo-secao text-center">Qualificações</h2>
 
             <div class="barra m-auto mb-2.5"></div>
-            <div class="flex  gap-5 mt-10  justify-between">
-                <div class="formacao-container bg-slate-800 p-5">
+            <div class="flex  gap-5 mt-10  flex-col items-center text-center sm:text-left">
+                <div class="formacao-container bg-slate-800">
                     <h3 class="title-skill">Formação</h3>
                     <div class="formacao-card">
                         <h4 class="text-cyan-700">Formação em Técnico de informática</h4>
@@ -122,10 +122,10 @@
                     </div>
                 </div> <!-- Fim do container formação -->
 
-                <div class="bg-slate-800 p-5">
+                <div class="bg-slate-800 sm:p-5 experiencia-container">
                     <h3 class="title-skill">Experiência</h3>
 
-                    <div class="experiencia-container">
+                    <div>
                         <div class="experiencia-card">
                             <h4 class="text-cyan-700">Técnico de redes de computadores</h4>
                             <span><a href="#">QoS Tel</a> 2023 - 2025</span>
@@ -135,15 +135,15 @@
                             </p>
                         </div>
                     </div>
-                </div> <!-- Fim do container formação -->
+                </div> <!-- Fim do container experiencia -->
             </div>
         </section> <!-- Fim da secção formações -->
         <section class="conteiner">
-            <p class="text-xl text-orange-600">O que eu já fiz?</p>
+            <p class="text-xl text-orange-600 sm:text-left text-center">O que eu já fiz?</p>
             <h2 class="titulo-secao">Meus projectos</h2>
             <div class="barra"></div>
             <div class="">
-                <div class="flex py-5 items-start gap-5 flex-wrap">
+                <div class="flex py-5 sm:items-start gap-5 items-center  flex-col sm:flex-row">
                     <div class="card-projecto">
                         <div>
                             <img src="assets/images/projects/portfolio.png" alt="Projecto portfolio" class="aspect-video">
@@ -192,7 +192,7 @@
     </main>
     <footer class="bg-black text-white py-5">
         <a href="https://github.com/josemarmartins21/" target="_blank">
-            <h1 class="text-center font-title pt-2.5 text-5xl">Josimar martins</h1>
+            <h1 class="text-center font-title pt-2.5 text-5xl leading-15">Josimar martins</h1>
         </a>
 
         <p class="text-center pt-5 pb-2.5">
