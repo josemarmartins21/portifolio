@@ -49,6 +49,10 @@
     .formacao-container, .experiencia-container {
         @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3;
     }
+
+    .info-container {
+        @apply leading-7.5;
+    }
 }
 
 @theme {

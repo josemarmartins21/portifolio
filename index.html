@@ -12,20 +12,20 @@
 
 </head>
 <body class=" bg-slate-900 h-screen text-white">
-    <main class="pb-20">
-        <section class="h-screen bg-[url(/assets/images/fundos/fundo-13.jpg)] bg-center bg-fixed">
+    <main class="pb-20" id="home">
+        <section class="h-screen bg-center bg-fixed" style="background-image: url(assets/images/fundos/fundo-13.jpg);">
         <header class="flex sm:justify-between gap-2.5 sm:gap-5 p-6 items-center sm:flex-row flex-col">
             <div>
-                <a href="#" class="text-orange-600 font-bold text-3xl font-title text-shadow-2xs text-shadow-black"><h1>Josimar Martins</h1></a>
+                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="text-orange-600 font-bold text-3xl font-title text-shadow-2xs text-shadow-black"><h1>Josimar Martins</h1></a>
             </div>
     
             <nav class="hidden sm:block">
                 <ul class="lista">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#" >Sobre</a></li>
-                    <li><a href="#">Minhas Skills</a></li>
-                    <li><a href="#">Qualificações</a></li>
-                    <li><a href="#">Projectos</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre" >Sobre</a></li>
+                    <li><a href="#skills">Minhas Skills</a></li>
+                    <li><a href="#qualificacoes">Qualificações</a></li>
+                    <li><a href="#projectos">Projectos</a></li>
                 </ul>
             </nav>
     
@@ -43,68 +43,108 @@
                 </div>
             </div>
         </section><!-- Fim do hero -->
-        <section class="mb-15 p-5 bg-slate-800">
+        <section class="mb-15 p-5 bg-slate-800" id="sobre">
             <div class="flex md:w-250 w-full m-auto sm:flex-row flex-col sm:justify-center  gap-2.5 items-center sm:gap-2.5">
-                <div class="basis-md sm:basis-sm">
+                <div class="basis-md hidden sm:inline-flex">
                     <img src="assets/images/josimar-portrait.jpeg" alt="Josimar Martins" class="w-60 rounded-lg">
                 </div>
-                <div class="basis-full sm:basis-80"> 
+                <div class="basis-full sm:grow"> 
                     <h2 class="text-4xl font-bold mb-2.5">Sobre mim</h2>
                     <div class="h-1.5 bg-orange-600 w-15"></div>
                     <p class="my-2.5 text-zinc-400 leading-7.5">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente excepturi a velit voluptatum, labore facere laudantium itaque debitis doloribus eligendi, numquam saepe nisi necessitatibus officia, distinctio ipsa consequuntur corporis. Quod!
                     </p>
-                    <div class="border border-orange-600 h-44">
-
+                    <div class="border border-orange-600 h-44 sm:p-0 p-2.5 text-[16px] sm:text-sm flex sm:justify-around sm:items-center">
+                        <ul class="info-container">
+                            <li><strong>Nome:</strong> Josimar da C. Martins</li>
+                            <li><strong>Tel:</strong> +244 940 121 011</li>
+                            <li><strong>Experiência:</strong> 6 mêses</li>
+                            <li><strong>Facebook:</strong> Josemar da Conceição</li>
+                        </ul>
+                        <ul class="info-container ">
+                            <li><strong>Idade:</strong> 20</li>
+                            <li><strong class="inline">Endereço:</strong> <address class="inline">Luanda, Camama</address></li>
+                            <li><strong>Prestação de serviço:</strong> Disponível</li>
+                        </ul>
                     </div>
-                    <a href="#" class="w-40 py-2 bg-orange-600 text-center inline-block mt-2">Baixar CV</a>
+                    <a href="assets/pdf/cv/curriculo.pdf" class="w-40 py-2 bg-orange-600 text-center inline-block mt-2" download="curriculo-josimar.pdf">Baixar CV</a>
                 </div>
             </div>
         </section> <!-- Fim do sobre mim -->
-        <section class="conteiner pb-25 ">
+        <section class="conteiner pb-25" id="skills">
             <h2 class="titulo-secao">Minhas Skills</h2>
             <div class="barra "></div>
 
-            <div class="flex flex-col sm:flex-row sm:w-7/8  sm:m-auto gap-5 sm:items-stretch items-center py-7.5">
+            <div class="flex flex-col-reverse sm:flex-row sm:w-7/8  sm:m-auto gap-5 sm:items-stretch items-center py-7.5">
                 <div class="card-skill">
                     <div class="icone">
-                        <i class="fa-brands fa-github icone"></i>
+                        <a href="https://git-scm.com/docs/git/pt_BR" target="_blank"><i class="fa-brands fa-github icone"></i></a>
                     </div>
-
                     <div class="info">
-                        <h3 class="title-skill">Git</h3>
+                        <h3 class="title-skill">Git</a></h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. D Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit.
+                           Git é um sistema de controle de versão distribuído (DVCS) de código aberto, essencial para desenvolvedores, que permite rastrear e gerenciar o histórico de mudanças em arquivos de projetos.
                         </p>
                     </div>
                 </div>
                 <div class="card-skill">
                     <div class="icone">
-                        <i class="fa-brands fa-html5 icone"></i>
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><i class="fa-brands fa-html5 icone"></i></a>
                     </div>
-
                     <div class="info">
-                        <h3 class="title-skill">Git</h3>
+                        <h3 class="title-skill"><abbr title="HyperText Markup Language">HTML</abbr></h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. D Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit.
+                            HTML é a linguagem de marcação padrão para criar a estrutura e o conteúdo de páginas web, como títulos, parágrafos, imagens e links, agindo como o "esqueleto" de um site para organizar informações visualmente para navegadores e usuários.
                         </p>
                     </div>
                 </div>
                 <div class="card-skill">
                     <div class="icone">
-                        <i class="fa-brands fa-php icone"></i>
+                        <a href="https://www.php.net/manual/pt_BR/index.php" target="_blank"><i class="fa-brands fa-php icone"></i></a>
                     </div>
-
                     <div class="info">
-                        <h3 class="title-skill">Git</h3>
+                        <h3 class="title-skill"><abbr title="PHP Hypertext Preprocessor">PHP</abbr></h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. D Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit.
+                            PHP (Hypertext Preprocessor) é uma linguagem de programação de código aberto, server-side (lado do servidor), amplamente utilizada para criar páginas e aplicações web dinâmicas.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-skill">
+                    <div class="icone">
+                        <a href="https://dev.mysql.com/doc/" target="_blank"><i class="fa-solid fa-database"></i></a>
+                    </div>
+                    <div class="info">
+                        <h3 class="title-skill"><abbr title="Structured Query Language">MySQL</abbr></h3>
+                        <p>
+                            MySQL é um Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) de código aberto, amplamente usado para armazenar e gerenciar dados de forma estruturada, utilizando a linguagem SQL para interagir com eles.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-skill">
+                    <div class="icone">
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank"><i class="fa-brands fa-css3-alt"></i></a>
+                    </div>
+                    <div class="info">
+                        <h3 class="title-skill"><abbr title="Cascading Style Sheets">CSS</abbr></h3>
+                        <p>
+                            Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags. 
+                        </p>
+                    </div>
+                </div>
+                <div class="card-skill">
+                    <div class="icone">
+                        <a href="https://laravel.com/docs/12.x/installation" target="_blank"><i class="fa-brands fa-laravel"></i></a>
+                    </div>
+                    <div class="info">
+                        <h3 class="title-skill">Laravel</h3>
+                        <p>
+                            O Laravel é um framework PHP open-source popular e poderoso, projetado para simplificar e acelerar o desenvolvimento de aplicações web, seguindo o padrão arquitetural MVC (Model-View-Controller) para organizar o código.
                         </p>
                     </div>
                 </div>
             </div>
         </section> <!-- Depois da secção minhas skills -->
-        <section class="conteiner mb-15  pb-10">
+        <section class="conteiner mb-15  pb-10" id="qualificacoes">
             <p class="text-center">Aqui estão as minhas qualificações</p>
             <h2 class="titulo-secao text-center">Qualificações</h2>
 
@@ -138,7 +178,7 @@
                 </div> <!-- Fim do container experiencia -->
             </div>
         </section> <!-- Fim da secção formações -->
-        <section class="conteiner">
+        <section class="conteiner" id="projectos">
             <p class="text-xl text-orange-600 sm:text-left text-center">O que eu já fiz?</p>
             <h2 class="titulo-secao">Meus projectos</h2>
             <div class="barra"></div>
@@ -201,12 +241,16 @@
 
         <div>
             <ul class="lista text-3xl">
-                <li class=""><a href="http://https://www.linkedin.com/in/josemar-martins-89029b31a/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-linkedin"></i></a></li>
-                <li class=""><a href="http://" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
+                <li class=""><a href="https://www.linkedin.com/in/josemar-martins-89029b31a/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-linkedin"></i></a></li>
+
+                <li class=""><a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
+
                     <i class="fa-brands fa-square-whatsapp"></i>
                 </a></li>
-                <li class=""><a href="http://https://www.instagram.com/josemar_martins21/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-instagram"></i></a></li>
-                <li class=""><a href="http://https://github.com/josemarmartins21/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
+
+                <li class=""><a href="https://www.instagram.com/josemar_martins21/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-instagram"></i></a></li>
+
+                <li class=""><a href="https://github.com/josemarmartins21" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
                     <i class="fa-brands fa-github"></i>
                 </a></li>
             </ul>
