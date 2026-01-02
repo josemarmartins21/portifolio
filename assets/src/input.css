@@ -32,14 +32,14 @@
     }
 
     .card-skill {
-        @apply bg-slate-800 sm:basis-60 w-4/5 p-5 h-[250px] text-center;
+        @apply bg-slate-800 flex flex-col justify-between sm:basis-60 w-4/5 p-5 h-62.5 text-center;
     }
 
     .title-skill {
         @apply  font-semibold my-1.5 text-2xl ;
     }
     .icone {
-        @apply text-3xl text-orange-600;
+        @apply text-5xl text-orange-600;
     }
 
     .qualificacoes {
@@ -52,6 +52,18 @@
 
     .info-container {
         @apply leading-7.5;
+    }
+
+    .link {
+        @apply text-orange-600 lg:hover:underline font-bold;
+    }
+
+    .rate-skill {
+        @apply block w-full text-right;
+    }
+
+    .porcentagem {
+        @apply h-1 bg-orange-600 mt-1.5;
     }
 }
 
