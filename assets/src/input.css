@@ -24,7 +24,7 @@
     }
 
     .conteiner {
-        @apply sm:w-250 m-auto ;
+        @apply sm:w-250 m-auto;
     }
 
     .titulo-secao {
@@ -32,7 +32,7 @@
     }
 
     .card-skill {
-        @apply bg-slate-800 flex flex-col justify-between sm:basis-60 w-4/5 p-5 h-62.5 text-center;
+        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center;
     }
 
     .title-skill {
@@ -47,7 +47,7 @@
     }
 
     .formacao-container, .experiencia-container {
-        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3;
+        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center  h-auto;
     }
 
     .info-container {
@@ -64,6 +64,10 @@
 
     .porcentagem {
         @apply h-1 bg-orange-600 mt-1.5;
+    }
+
+    .sumario {
+        @apply: sm:hover:cursor-pointer;
     }
 }
 
