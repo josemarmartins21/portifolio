@@ -47,7 +47,7 @@
     }
 
     .formacao-container, .experiencia-container {
-        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center  h-auto;
+        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:basis-[320px] sm:text-center  h-[180px] rounded-3xl;
     }
 
     .info-container {
