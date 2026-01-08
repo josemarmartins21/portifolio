@@ -31,23 +31,28 @@
         @apply text-3xl font-semibold mb-2.5 text-center sm:text-left;
     }
 
+    
     .card-skill {
-        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center;
+        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:-translate-y-2 sm:ease-in-out active:scale-75 sm:active:scale-none;
+        .title-skill {
+            @apply  font-semibold my-1.5 text-2xl;
+        }
+        .icone {
+            @apply text-5xl text-orange-600;
+                 i {
+                    @apply sm:transition sm:hover:text-white sm:duration-600 sm:ease-in-out;
+                }
+        }
     }
 
-    .title-skill {
-        @apply  font-semibold my-1.5 text-2xl ;
-    }
-    .icone {
-        @apply text-5xl text-orange-600;
-    }
+
 
     .qualificacoes {
         @apply flex border-2 border-orange-600 p-5 gap-5 mb-5;
     }
 
     .formacao-container, .experiencia-container {
-        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center  h-auto;
+        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center;
     }
 
     .info-container {
