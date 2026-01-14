@@ -33,7 +33,7 @@
 
     
     .card-skill {
-        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:-translate-y-2 sm:ease-in-out active:scale-75 sm:active:scale-none;
+        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
         .title-skill {
             @apply  font-semibold my-1.5 text-2xl;
         }
