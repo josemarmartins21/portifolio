@@ -634,6 +634,16 @@
       }
     }
   }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
+  .md\:inline-flex {
+    @media (width >= 48rem) {
+      display: inline-flex;
+    }
+  }
   .md\:w-250 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 250);
