@@ -8,7 +8,7 @@
     }
 
     .barra {
-        @apply h-1.5 bg-orange-600 w-15 m-auto sm:m-0;
+        @apply h-1.5 bg-orange-600 w-15 m-auto sm:m-auto;
     }
 
     .card-projecto {
@@ -28,7 +28,7 @@
     }
 
     .titulo-secao {
-        @apply text-3xl font-semibold mb-2.5 text-center sm:text-left;
+        @apply text-3xl font-semibold mb-2.5 text-center capitalize;
     }
 
     

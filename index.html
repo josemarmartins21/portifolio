@@ -45,7 +45,7 @@
         <section class="mb-15 p-5 bg-slate-800" id="sobre">
             <div class="flex md:w-250 w-full m-auto sm:flex-row flex-col sm:justify-center  gap-2.5 items-center sm:gap-2.5">
                 <div class="basis-md hidden sm:inline-flex">
-                    <img src="assets/images/josimar-portrait.jpeg" alt="Josimar Martins" class="w-60 rounded-lg">
+                    <img src="assets/images/josimar-portrait.jpeg" alt="Josimar Martins" class="w-60 rounded-lg sm:hover:brightness-80 transition duration-700">
                 </div>
                 <div class="basis-full sm:grow"> 
                     <h2 class="text-4xl font-bold mb-2.5">Sobre mim</h2>
@@ -75,7 +75,7 @@
             <h2 class="titulo-secao">Minhas Skills</h2>
             <div class="barra"></div>
 
-            <div class="flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap  sm:m-auto gap-5 sm:gap-x-10 sm:items-stretch items-center py-7.5">
+            <div class="sm:mt-7.5 flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap   gap-7.5 sm:m-auto sm:gap-x-10 sm:items-stretch items-center py-7.5">
                 <div class="card-skill">
                     <div class="icone">
                         <a href="https://git-scm.com/docs/git/pt_BR" target="_blank"><i class="fa-brands fa-github icone "></i></a>
@@ -156,56 +156,52 @@
                 </div>
             </div>
         </section> <!-- Depois da secção minhas skills -->
-        <section class="conteiner mb-15  pb-10" id="qualificacoes">
+        <section class="conteiner mb-20  pb-10" id="qualificacoes">
             <p class="text-center sm:hidden">Aqui estão as minhas qualificações</p>
-            <h2 class="titulo-secao text-center">Qualificações</h2>
+            <h2 class="titulo-secao">Qualificações</h2>
 
-            <div class="barra m-auto mb-2.5"></div>
-            <div class="flex  gap-5 mt-10  flex-col sm:flex-row items-center sm:items-start text-center sm:text-left sm:justify-between">
-                <div class="formacao-container bg-slate-800">
-                    <h3 class="title-skill">Formação</h3>
-                    <div class="formacao-card">
-                        <h4 class="text-cyan-700">Técnico de informática</h4>
-                        <span><a href="https://www.facebook.com/profile.php?id=100087484766375" class="text-orange-600 sm:hover:underline font-bold" target="_blank">Colégio Mundo Novo </a>2022 - Presente</span>
+            <div class="barra m-auto"></div>
+            <div class="md:grid-cols-2 md:grid md:gap-5 mt-5">
+                <div id="formacao-container" class="p-5 sm:pl-0">
+                    <h2 id="titulo-academica-seccao" class="py-5 text-2xl font-semibold sm:text-left text-center">Trajetória Académica</h2>
 
-                        <details>
-                            <summary class="sumario">Detalhes</summary>
-                            <p class="leading-6">
+                    <div id="formacao-cards" class="gap-3 flex flex-col items-center"> 
+                        <div class="formacao sm:text-left text-center sm:bg-slate-800 rounded-xl md:hover:bg-blue-800 bg-blue-800 transition duration-700 p-2 pb-6 sm:h-42.5 h-54">
+                            <h3 class="experiencia-titulo text-2xl font-semibold">Ensino Médio de Informática</h3>
+                            <span>Colégio Mundo Novo 2022 - 2026</span>
+
+                            <p class="paragrafo text-[14px] mt-3">
                                 Estou a cursar o último ano do curso técnico médio de informática no Colégio Mundo Novo, onde adquiri conhecimentos sólidos em diversas áreas da informática, incluindo programação, redes de computadores, entre outros.
                             </p>
-                        </details>
-                    </div>
-                </div> <!-- Fim do container formação -->
+                        </div>
+                </div>
+                </div>
 
-                <div class="bg-slate-800 sm:p-5 experiencia-container">
-                    <h3 class="title-skill">Experiência</h3>
+                <div id="experiencia-conatiner" class="p-5 sm:pr-0">
+                    <h2 id="titulo-experiencia-seccao" class="py-5 text-2xl font-semibold  sm:text-left text-center">Trajetória Profissional</h2>
 
-                    <div>
-                        <div class="experiencia-card">
-                            <h4 class="text-cyan-700">Técnico de redes de computadores</h4>
-                            <span><a href="https://www.facebook.com/profile.php?id=100092364702262" class="text-orange-600 sm:hover:underline font-bold" target="_blank">QoS Tel</a> 2023 - Presente</span>
+                    <div id="formacao-cards" class=" flex flex-col gap-3"> 
+                        <div class="formacao sm:text-left text-center sm:bg-slate-800 md:hover:bg-amber-800 bg-amber-800 transition duration-700  rounded-xl p-2 pb-6 sm:h-42.5 h-59">
+                            <h3 class="experiencia-titulo text-2xl font-semibold">Técnico de Redes de Computadores</h3>
+                            <span>QoS Tel 2023 - Presente</span>
 
-                            <details>
-                                <summary class="sumario">Detalhes</summary>
-                                <p>
-                                    Atuo como técnico de redes de computadores na QoS Tel, onde sou responsável pela instalação, configuração e manutenção de redes em ambientes residenciais e empresariais. Adquiri experiência prática na resolução de problemas de conectividade e suporte ao cliente.
-                                </p>
-                            </details>
+                            <p class="paragrafo text-[14px] mt-3">
+                                Atuo como técnico de redes de computadores na QoS Tel, onde sou responsável pela instalação, configuração e manutenção de redes em ambientes residenciais e empresariais. Adquiri experiência prática na resolução de problemas de conectividade e suporte ao cliente.
+                            </p>
                         </div>
                     </div>
-                </div> <!-- Fim do container experiencia -->
+                </div>
             </div>
         </section> <!-- Fim da secção formações -->
         <section class="conteiner" id="projectos">
-            <p class="text-xl text-orange-600 sm:text-left text-center">O que eu já fiz?</p>
             <h2 class="titulo-secao">Meus projectos</h2>
             <div class="barra"></div>
-            <div class="">
+            <div class="mt-5">
                 <div class="flex py-5 sm:items-start gap-5 items-center  flex-col sm:flex-row">
                     <div class="card-projecto">
-                        <div>
-                            <img src="assets/images/projects/portfolio.png" alt="Projecto portfolio" class="aspect-video">
-                        </div>
+                        <a href="#">
+                            <img src="assets/images/projects/portfolio.png" alt="Projecto portfolio" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
                         <div class="p-2.5">
                             <h3 class="title-project"><a href="#" class="link-project">Projecto Portfólio</a></h3>
                             <details>
@@ -217,9 +213,9 @@
                         </div>
                     </div>
                     <div class="card-projecto">
-                        <div>
-                            <img src="assets/images/projects/viaja-mais.png" alt="Projecto viajamais" class="aspect-video">
-                        </div>
+                        <a href="https://josemarmartins21.github.io/site-de-viagens/" target="_blank">
+                            <img src="assets/images/projects/viaja-mais.png" alt="Projecto viajamais" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
                         <div class="p-2.5">
                             <h3 class="title-project"><a href="https://josemarmartins21.github.io/site-de-viagens/" class="link-project" target="_blank">ViajaMais</a></h3>
                             <details>
@@ -231,9 +227,9 @@
                         </div>
                     </div>
                     <div class="card-projecto">
-                        <div>
-                            <img src="assets/images/projects/stockflow.png" alt="Projecto de gestão de estoque" class="aspect-video">
-                        </div>
+                        <a href="https://github.com/josemarmartins21/StockFlow"  target="_blank">
+                            <img src="assets/images/projects/stockflow.png" alt="Projecto de gestão de estoque" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
                         <div class="p-2.5">
                             <h3 class="title-project"><a href="https://github.com/josemarmartins21/StockFlow" class="link-project" target="_blank">StockFlow</a></h3>
                             <details>
@@ -250,11 +246,11 @@
     </main>
     <footer class="bg-black text-white py-5">
         <a href="https://github.com/josemarmartins21/" target="_blank" class="sm:w-150 w-80 m-auto block">
-            <h1 class="text-center font-title pt-2.5 sm:text-6xl text-3xl w-auto leading-15 sm:transition sm:duration-500 sm:hover:text-orange-600">Josimar martins</h1>
+            <h1 class="text-center font-title pt-2.5 sm:text-6xl text-3xl w-auto leading-15 sm:transition sm:duration-500 sm:hover:text-orange-600 capitalize">Josimar martins</h1>
         </a>
 
         <p class="text-center pt-5 pb-2.5">
-            &copy; <span id="ano"></span> <a href="https://github.com/josemarmartins21/" target="_blank" class="sm:hover:underline">Josimar Martins</a>. Todos os direitos reservados.
+            &copy; <span id="ano"></span> <a href="https://github.com/josemarmartins21/" target="_blank" class="sm:hover:underline ">Josimar Martins</a>. Todos os direitos reservados.
         </p>
 
         <div>
