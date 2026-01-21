@@ -10,7 +10,7 @@
     <!-- Fonte Awesome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class=" bg-slate-900 h-screen text-white" onload="atualizarAno()">
+<body class=" bg-slate-900 h-screen transition duration-700 text-white" onload="atualizarAno()">
     <main class="pb-20" id="home">
         <section class="h-screen bg-center bg-fixed" style="background-image: url(assets/images/fundos/fundo-13.jpg);">
         <header class="flex sm:justify-between gap-2.5 sm:gap-5 p-6 items-center sm:flex-row flex-col">
@@ -197,7 +197,7 @@
             <h2 class="titulo-secao">Meus projectos</h2>
             <div class="barra"></div>
             <div class="mt-5">
-                <div class="flex py-5 sm:items-start gap-5 items-center  flex-col sm:flex-row">
+                <div class="flex py-5 sm:items-start gap-5 items-center  flex-col sm:flex-row sm:flex-wrap">
                     <div class="card-projecto">
                         <a href="#">
                             <img src="assets/images/projects/portfolio.png" alt="Projecto portfolio" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
@@ -207,11 +207,12 @@
                             <details>
                                 <summary class="sumario">Descrição</summary>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quae hic enim esse odio veniam.
+                                    Projecto de um portfolio desenvolvido no último modúlo do curso de HTML5 e CSS3 do Curso em Video.
                                 </p>
                             </details>
                         </div>
                     </div>
+
                     <div class="card-projecto">
                         <a href="https://josemarmartins21.github.io/site-de-viagens/" target="_blank">
                             <img src="assets/images/projects/viaja-mais.png" alt="Projecto viajamais" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
@@ -226,6 +227,7 @@
                             </details>
                         </div>
                     </div>
+
                     <div class="card-projecto">
                         <a href="https://github.com/josemarmartins21/StockFlow"  target="_blank">
                             <img src="assets/images/projects/stockflow.png" alt="Projecto de gestão de estoque" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
@@ -236,6 +238,120 @@
                                 <summary class="sumario">Descrição</summary>
                                 <p>
                                     Projecto de gestão de estoque de um bar voltado para venda de bebidas alcoólicas, refrigerantes, canabis entre outros.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="card-projecto">
+                        <a href="https://josemarmartins21.github.io/ordepdita-interface/"  target="_blank">
+                            <img src="assets/images/projects/ordepedita.png" alt="Interface Gráfica do Usuário da Ordepedita" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/ordepdita-interface/" class="link-project" target="_blank">Ordepedita</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    UI desenvolvida para a Ordepedita. Ela é responsiva e serviu de base para o frontend do site da empresa.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="card-projecto">
+                        <a href="https://github.com/josemarmartins21/QManager-beta"  target="_blank">
+                            <img src="assets/images/projects/qmanager.jpg" alt="Projecto de Gestão de Clientes" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://github.com/josemarmartins21/QManager-beta" class="link-project" target="_blank">QManager</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    CRM que estou a desenvolver para a empresa QoS Tel.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="card-projecto">
+                        <a href="https://josemarmartins21.github.io/projecto-android/"  target="_blank">
+                            <img src="assets/images/projects/projecto-android.png" alt="Projecto Android" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/projecto-android/" class="link-project" target="_blank">Projecto android</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Página desenvolvida durante o último capítulo do modúlo 2 do curso de HTML5 e CSS3 do Curso em Video.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="card-projecto">
+                        <a href="https://josemarmartins21.github.io/cordel/"  target="_blank">
+                            <img src="assets/images/projects/projecto-cordel.png" alt="Projecto Cordel" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/cordel/" class="link-project" target="_blank">Projecto Cordel</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Desenvolvi este site com o intuito de treinar a aplicação do efeito paralax e posicionamento de imagens de fundo de forma responsiva.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="card-projecto">
+                        <a href="https://josemarmartins21.github.io/projecto-login/"  target="_blank">
+                            <img src="assets/images/projects/projecto-login.png" alt="Projecto Login" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/projecto-login/" class="link-project" target="_blank">Projecto Login</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Projecto desenvolvido durante o 4ª modúlo do curso de HTML5 e CSS3 do curso em vídeo. Serviu como exercicio para aplicar tudo que abordamos acerca de media query durante o modúlo.
+                                </p>
+                            </details>
+                        </div>
+                        
+                    </div>
+                    <div class="card-projecto">
+                        <a href="https://josemarmartins21.github.io/projecto-social/"  target="_blank">
+                            <img src="assets/images/projects/projecto-social.png" alt="Projecto Social" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/projecto-social/" class="link-project" target="_blank">Projecto Social</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Projecto desenvolvido durante o 4ª modúlo do curso de HTML5 e CSS3 do curso em vídeo. Serviu como exercicio para aplicar tudo que abordamos acerca de iframe durante o modúlo.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="card-projecto">
+                        <a href="https://josemarmartins21.github.io/qos-tel-landing-page/"  target="_blank">
+                            <img src="assets/images/projects/qos-tel.png" alt="Projecto QoS Tel" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/qos-tel-landing-page/" class="link-project" target="_blank">QoS Tel Landing Page</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Landing Page desenvolvida para a QoS Tel. Ela é totalmente responsiva e otimizada para ser executada em qualquer dispositivo com um navegador web.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="card-projecto">
+                        <a href=""  target="_blank">
+                            <img src="assets/images/projects/xbox.png" alt="Xbox" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/xbox-consoles" class="link-project" target="_blank">Xbox</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Web Site desenvolvido para mostrar a evolução do Xbox nestes mais 20 anos do console e serviu também para mim treinar flex box e animações com o CSS.
                                 </p>
                             </details>
                         </div>
