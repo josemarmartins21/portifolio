@@ -652,6 +652,15 @@
       transition-duration: 500ms;
     }
   }
+  .sm\:hover\:cursor-pointer {
+    @media (width >= 40rem) {
+      &:hover {
+        @media (hover: hover) {
+          cursor: pointer;
+        }
+      }
+    }
+  }
   .sm\:hover\:bg-orange-600 {
     @media (width >= 40rem) {
       &:hover {
