@@ -4,7 +4,7 @@
 
 @layer {
     .lista {
-        @apply flex gap-4 justify-center; 
+        @apply flex gap-4 flex-col sm:flex-row sm:justify-center; 
     }
 
     .barra {
