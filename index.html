@@ -13,12 +13,12 @@
 <body class=" bg-slate-900 h-screen transition duration-700 text-white" onload="atualizarAno()">
     <main class="pb-20" id="home">
         <section class="h-screen bg-center bg-fixed" style="background-image: url(assets/images/fundos/fundo-13.jpg);">
-        <header class="sm:flex bg-slate-900 sm:bg-transparent text-white grid items-start grid-cols-2 grid-rows-1 sm:flex-wrap sm:justify-between gap-2.5 sm:gap-5  p-6 sm:items-center">
-            <div class="col-span-[200px]">
-                <a href="#" class="text-orange-600 font-bold text-xl sm:text-3xl font-title text-shadow-2xs text-shadow-black md:block"><h1>Josimar Martins</h1></a>
+        <header class="heder-container">
+            <div class="logo-container">
+                <a href="#" class="logo-link "><h1>Josimar Martins</h1></a>
             </div>
     
-            <nav class="order-last sm:order-0 hidden sm:inline-flex col-span-full" id="menu-container"> 
+            <nav class="menu-nav" id="menu-container"> 
                 <ul class="lista">
                     <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#home">Home</a></li>
                     <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#sobre" >Sobre</a></li>
@@ -28,38 +28,38 @@
                 </ul>
             </nav>
     
-            <div class="hidden sm:inline-flex">
-                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="border transition border-orange-600 w-40 py-2 sm:hover:bg-orange-600 text-center inline-block transform active:scale-75 duration-500 md:block">Whatsapp</a>
+            <div class="whatsappp-cta-container">
+                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="whatsapp-cta">Whatsapp</a>
             </div>
 
-            <div class="col-span-1 sm:hidden flex justify-end items-center">
+            <div id="menu-h-container">
                 <i class="fa-solid fa-bars text-xl" id="menu"></i>
             </div>
         </header>
 
-            <div class="h-3/5 flex items-center justify-center flex-col sm:pt-0 pt-20">
+            <div class="disclaimer-container">
                 <div>
-                    <img src="assets/images/josimar.jpeg" alt="Josimar Martins" class="w-60 rounded-full">
+                    <img src="assets/images/josimar.jpeg" alt="Josimar Martins" class="self-image">
                 </div>
-                <div class="p-4 text-center">
-                    <h2 class="text-orange-600 font-bold sm:text-3xl text-3xl text-shadow-black text-shadow-2xs animate-pulse">Josimar Martins</h2>
-                    <p class="text-xl text-shadow-black text-shadow-2xs">Desenvolvedor backend e solucionador de problemas.</p>
+                <div class="disclaimer-mini">
+                    <h2>Josimar Martins</h2>
+                    <p>Desenvolvedor backend e solucionador de problemas.</p>
                 </div>
             </div>
         </section><!-- Fim do hero -->
-        <section class="mb-15 p-5 bg-slate-800" id="sobre">
-            <div class="flex md:w-250 w-full m-auto sm:flex-row flex-col sm:justify-center  gap-2.5 items-center sm:gap-2.5">
-                <div class="basis-md hidden sm:inline-flex">
-                    <img src="assets/images/josimar-portrait.jpeg" alt="Josimar Martins" class="w-60 sm:hover:cursor-pointer rounded-lg sm:hover:brightness-80 transition duration-700">
+        <section class="sobre-mim-container" id="sobre">
+            <div class="sobre-mim-sub">
+                <div class="sobre-image-card">
+                    <img src="assets/images/josimar-portrait.jpeg" alt="Josimar Martins">
                 </div>
-                <div class="basis-full sm:grow"> 
-                    <h2 class="text-4xl font-bold mb-2.5">Sobre mim</h2>
-                    <div class="h-1.5 bg-orange-600 w-15"></div>
-                    <p class="my-2.5 text-zinc-400 leading-7.5">
+                <div class="sobre-details"> 
+                    <h2>Sobre mim</h2>
+                    <div class="sobre-barra"></div>
+                    <p>
                         Sou um estudante do último ano do curso técnico médio de Informática, com 6 meses de experiência em redes de computadores na empresa <a href="https://www.facebook.com/profile.php?id=100092364702262" target="_blank" rel="external" class="link">QoS Tel</a>. Experiência na instalação e manutenção de infraestruturas de rede em ambientes residenciais e empresariais, incluindo organizações de grande dimensão como a Lilás e o Shopping Hoji Ya Henda.
                         Conhecimento na configuração de antenas de rede (Tenda e MikroTik) e roteadores de diversas marcas. Atuação complementar em desenvolvimento web, com criação de websites para ISP e desenvolvimento de um sistema de gestão de estoque para bares de pequena dimensão.
                     </p>
-                    <div class="border border-orange-600 sm:h-44 sm:p-0 p-2.5 sm:text-[16px] flex sm:justify-around flex-col sm:flex-row  sm:items-center text-[14px] ">
+                    <div class="coodernadas-container">
                         <ul class="info-container">
                             <li><strong>Nome:</strong> Josimar Martins</li>
                             <li><strong>Idade:</strong> 20</li>
@@ -72,7 +72,7 @@
                             <li><strong>Trabalhar / Prestar Serviço:</strong> <span  class="text-green-600">Disponível</span></li>
                         </ul>
                     </div>
-                    <a href="assets/pdf/cv/curriculo.pdf" class="w-40 py-2 md:hover:scale-105 bg-orange-600  text-center inline-block mt-2 transform active:scale-75 md:active:scale-none transition duration-500" download="curriculo-josimar.pdf">Baixar CV</a>
+                    <a href="assets/pdf/cv/curriculo.pdf" class="cv-downlod" download="curriculo-josimar.pdf">Baixar CV</a>
                 </div>
             </div>
         </section> <!-- Fim do sobre mim -->
@@ -80,7 +80,7 @@
             <h2 class="titulo-secao">Minhas Skills</h2>
             <div class="barra"></div>
 
-            <div class="sm:mt-7.5 flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap   gap-7.5 sm:m-auto sm:gap-x-10 sm:items-stretch items-center py-7.5">
+            <div class="skills-container">
                 <div class="card-skill">
                     <div class="icone">
                         <a href="https://git-scm.com/docs/git/pt_BR" target="_blank"><i class="fa-brands fa-github icone "></i></a>
@@ -161,25 +161,25 @@
                 </div>
             </div>
         </section> <!-- Depois da secção minhas skills -->
-        <section class="conteiner mb-20  pb-10" id="qualificacoes">
-            <p class="text-center sm:hidden">Aqui estão as minhas qualificações</p>
+        <section class="conteiner qualificacoes-container" id="qualificacoes">
+            <p>Aqui estão as minhas qualificações</p>
             <h2 class="titulo-secao">Qualificações</h2>
 
             <div class="barra m-auto"></div>
-            <div class="md:grid-cols-2 md:grid md:gap-5 mt-5">
-                <div id="formacao-container" class="p-5 sm:pl-0">
-                    <h2 id="titulo-academica-seccao" class="py-5 text-2xl font-semibold sm:text-left text-center">Trajetória Académica</h2>
+            <div class="qualificacoes">
+                <div id="formacao-container" class="qualificacao">
+                    <h2 id="titulo-academica-seccao">Trajetória Académica</h2>
 
-                    <div id="formacao-cards" class="gap-3 flex flex-col items-center"> 
-                        <div class="formacao sm:hover:cursor-pointer sm:text-left flex flex-col items-center justify-center text-center sm:bg-slate-800 rounded-xl md:hover:bg-blue-800 bg-blue-800 transition duration-700 p-2 pb-6 sm:h-42.5 h-65">
-                            <h3 class="experiencia-titulo text-2xl font-semibold">Ensino Médio de Informática</h3>
+                    <div class="formacao-card"> 
+                        <div class="formacao">
+                            <h3 class="experiencia-titulo">Ensino Médio de Informática</h3>
                             <span>Colégio Mundo Novo 2022 - 2026</span>
 
-                            <p class="paragrafo text-[14px] mt-3">
+                            <p class="paragrafo">
                                 Estou a cursar o último ano do curso técnico médio de informática no Colégio Mundo Novo, onde adquiri conhecimentos sólidos em diversas áreas da informática, incluindo programação, redes de computadores, entre outros.
                             </p>
                         </div>
-                </div>
+                    </div>
                 </div>
 
                 <div id="experiencia-conatiner" class="p-5 sm:pr-0">

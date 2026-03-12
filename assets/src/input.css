@@ -3,9 +3,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @layer {
+
+    /* HEADER */
+    .heder-container {
+        @apply sm:flex bg-slate-900 sm:bg-transparent text-white grid items-start grid-cols-2 grid-rows-1 sm:flex-wrap sm:justify-between gap-2.5 sm:gap-5  p-6 sm:items-center;
+    }
+
+    .logo-container {
+        @apply col-span-[200px];
+    }
+
+    .logo-container a.logo-link {
+        @apply text-orange-600 font-bold text-xl sm:text-3xl font-title text-shadow-2xs text-shadow-black md:block;
+    }
+
+    /* Menu de navegação */
+    .menu-nav {
+        @apply order-last sm:order-0 hidden sm:inline-flex col-span-full;
+    }  
+    
+    /* Lista de links */
     .lista {
         @apply flex gap-4 flex-col sm:flex-row sm:justify-center; 
     }
+
+    /* =============== Mobile Menu =========================== */
+    #menu-h-container {
+        @apply col-span-1 sm:hidden flex justify-end items-center;
+    }
+    /* =============== MODBILE DETALHE FIM ==================*/
+    /* DISCLAIMER MINI AUTO INTRODUÇÃO */
+    .disclaimer-container {
+        @apply h-3/5 flex items-center justify-center flex-col sm:pt-0 pt-20;
+    }
+
+    .disclaimer-container .self-image {
+        @apply w-60 rounded-full;
+    }
+
+    .disclaimer-mini {
+        @apply p-4 text-center;
+    }
+
+    .disclaimer-mini h2 {
+        @apply text-orange-600 font-bold sm:text-3xl text-3xl text-shadow-black text-shadow-2xs animate-pulse;
+    }
+
+    .disclaimer-mini p {
+        @apply text-xl text-shadow-black text-shadow-2xs;
+    }
+
+    .whatsappp-cta-container {
+        @apply hidden sm:inline-flex;
+    }
+
+    .whatsappp-cta-container a.whatsapp-cta {
+        @apply border transition border-orange-600 w-40 py-2 sm:hover:bg-orange-600 text-center inline-block transform active:scale-75 duration-500 md:block;
+    }
+    /* ============= FIM DO HERO ====================*/
+
+
+    /* =========== SOBRE MIM SECTION ==========================*/
+
+    .sobre-mim-container {
+        @apply mb-15 p-5 bg-slate-800;
+    }
+
+    .sobre-mim-sub {
+        @apply flex md:w-250 w-full m-auto sm:flex-row flex-col sm:justify-center  gap-2.5 items-center sm:gap-2.5;
+    }
+
+    .sobre-image-card {
+        @apply basis-md hidden sm:inline-flex;
+    }
+    
+    .sobre-image-card img {
+        @apply w-60 sm:hover:cursor-pointer rounded-lg sm:hover:brightness-80 transition duration-700;
+    }
+
+    /* === Sobre MIM DETALHES == */
+    .sobre-details {
+        @apply basis-full sm:grow;
+    }
+
+    .sobre-details > h2 {
+        @apply text-4xl font-bold mb-2.5;
+    }
+
+    .sobre-details > .sobre-barra {
+        @apply h-1.5 bg-orange-600 w-15;
+    }
+
+    .sobre-details > p {
+        @apply my-2.5 text-zinc-400 leading-7.5;
+    }
+
+    /* === MINHAS CODERNADAS ====*/ 
+    .coodernadas-container {
+        @apply border border-orange-600 sm:h-44 sm:p-0 p-2.5 sm:text-[16px] flex sm:justify-around flex-col sm:flex-row  sm:items-center text-[14px];
+    }
+    .info-container {
+        @apply leading-7.5;
+    }
+
+    /** == CV DOWNLOAD === */
+    .cv-downlod {
+        @apply w-40 py-2 md:hover:scale-105 bg-orange-600  text-center inline-block mt-2 transform active:scale-75 md:active:scale-none transition duration-500;
+    }
+
+    /* =========== SKILLS SECTION =======================*/
+    .conteiner {
+        @apply sm:w-250 m-auto;
+    }
+
+    .skills-container {
+        @apply sm:mt-7.5 flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap   gap-7.5 sm:m-auto sm:gap-x-10 sm:items-stretch items-center py-7.5;
+    }
+
+    /* ====== CARD SKILLS ===== */
+    .card-skill {
+        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
+
+        .title-skill {
+            @apply  font-semibold my-1.5 text-2xl;
+        }
+
+        .icone {
+            @apply text-5xl text-orange-600;
+
+                 i {
+                    @apply sm:transition sm:hover:text-white sm:duration-600 sm:ease-in-out;
+                }
+        }
+    }
+
+    .porcentagem {
+        @apply h-1 bg-orange-600 mt-1.5;
+    }
+
+    .rate-skill {
+        @apply block w-full text-right;
+    }
+
+    /**======= FIM CARD SKILL ========== **/
+
+ /* =========== QUALIFICAÇÕES =============================*/ 
+    .qualificacoes-container {
+        @apply mb-20  pb-10;
+    }
+
+    .qualificacoes-container > p {
+        @apply text-center sm:hidden;
+    }
+
+    .qualificacoes {
+        @apply md:grid-cols-2 md:grid md:gap-5 mt-5;
+    }
+
+    .qualificacao {
+        @apply p-5 sm:pl-0;
+    }
+
+    .qualificacao {
+        @apply py-5 text-2xl font-semibold sm:text-left text-center;
+    }
+
+    .qualificao > .formacao-card {
+        @apply gap-3 flex flex-col items-center;
+    }
+
+    .qualificacao 
+    > .formacao-card 
+    > div {
+        @apply sm:hover:cursor-pointer sm:text-left flex flex-col items-center justify-center text-center sm:bg-slate-800 rounded-xl md:hover:bg-blue-800 bg-blue-800 transition duration-700 p-2 pb-6 sm:h-42.5 h-65;
+    } 
+
+    .formacao-card h3 {
+        @apply  text-2xl font-semibold;
+    }
+
+    .formacao-container, .experiencia-container {
+        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center;
+    }
+
+    .formacao-card p {
+        @apply text-[14px] mt-3;
+    }
+   
 
     .barra {
         @apply h-1.5 bg-orange-600 w-15 m-auto sm:m-auto;
@@ -23,27 +207,14 @@
         @apply  hover:underline;
     }
 
-    .conteiner {
-        @apply sm:w-250 m-auto;
-    }
+    
 
     .titulo-secao {
         @apply text-3xl font-semibold mb-2.5 text-center capitalize;
     }
 
     
-    .card-skill {
-        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
-        .title-skill {
-            @apply  font-semibold my-1.5 text-2xl;
-        }
-        .icone {
-            @apply text-5xl text-orange-600;
-                 i {
-                    @apply sm:transition sm:hover:text-white sm:duration-600 sm:ease-in-out;
-                }
-        }
-    }
+    
 
 
 
@@ -51,25 +222,17 @@
         @apply flex border-2 border-orange-600 p-5 gap-5 mb-5;
     }
 
-    .formacao-container, .experiencia-container {
-        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center;
-    }
+    
 
-    .info-container {
-        @apply leading-7.5;
-    }
+    
 
     .link {
         @apply text-orange-600 lg:hover:underline font-bold;
     }
 
-    .rate-skill {
-        @apply block w-full text-right;
-    }
+   
 
-    .porcentagem {
-        @apply h-1 bg-orange-600 mt-1.5;
-    }
+   
 
     .sumario {
         @apply: sm:hover:cursor-pointer;

@@ -1,0 +1,18 @@
+# Meu portfólio 
+Meu portfolio nele tem listado todos os
+projectos relevante que eu já desenvolvi e 
+botão de download do meu
+**CV**.
+
+### Instalação
+
+Executa o comando abaixo para inicializar o 
+servidor
+```
+npx @tailwindcss/cli -i ./assets/src/input.css -o ./assets/src/output.css --watch
+```
+## Tecnológias Utilizadas
+- Tailwind CSS
+- JavaScript
+
+
