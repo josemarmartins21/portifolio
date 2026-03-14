@@ -3,9 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @layer {
+    /*=============== Generals ============*/
+    .barra {
+        @apply h-1.5 bg-orange-600 w-15 m-auto sm:m-auto;
+    }
+    
+    .titulo-secao {
+        @apply text-3xl font-semibold mb-2.5 text-center capitalize;
+    }
 
-    /* HEADER */
-    .heder-container {
+    /*================ HEADER ===========================*/
+    .header-container {
         @apply sm:flex bg-slate-900 sm:bg-transparent text-white grid items-start grid-cols-2 grid-rows-1 sm:flex-wrap sm:justify-between gap-2.5 sm:gap-5  p-6 sm:items-center;
     }
 
@@ -17,9 +25,9 @@
         @apply text-orange-600 font-bold text-xl sm:text-3xl font-title text-shadow-2xs text-shadow-black md:block;
     }
 
-    /* Menu de navegação */
+    /* ============ Menu de navegação =============*/
     .menu-nav {
-        @apply order-last sm:order-0 hidden sm:inline-flex col-span-full;
+        @apply order-last sm:order-0 sm:inline-flex col-span-full;
     }  
     
     /* Lista de links */
@@ -46,7 +54,7 @@
     }
 
     .disclaimer-mini h2 {
-        @apply text-orange-600 font-bold sm:text-3xl text-3xl text-shadow-black text-shadow-2xs animate-pulse;
+        @apply text-orange-600 font-bold sm:text-3xl text-3xl text-shadow-black text-shadow-2xs;
     }
 
     .disclaimer-mini p {
@@ -58,8 +66,9 @@
     }
 
     .whatsappp-cta-container a.whatsapp-cta {
-        @apply border transition border-orange-600 w-40 py-2 sm:hover:bg-orange-600 text-center inline-block transform active:scale-75 duration-500 md:block;
+        @apply animate-pulse font-bold transition bg-green-700 rounded-xl w-40 py-2 text-center inline-block transform active:scale-75 duration-500 md:block;
     }
+
     /* ============= FIM DO HERO ====================*/
 
 
@@ -156,45 +165,68 @@
         @apply text-center sm:hidden;
     }
 
-    .qualificacoes {
-        @apply md:grid-cols-2 md:grid md:gap-5 mt-5;
+    .qualificacoes-container .barra {
+        @apply md:mb-6;
     }
 
-    .qualificacao {
-        @apply p-5 sm:pl-0;
+    #qualificacoes {
+        @apply  md:block mt-5;
     }
 
-    .qualificacao {
-        @apply py-5 text-2xl font-semibold sm:text-left text-center;
+    /**================ Experiencia Profissional && Formação Académica ================== */
+    #experiencia-cards h2, #formacao-cards h2 {
+        @apply text-3xl font-bold md:text-center text-center md:pb-10 pt-7.5 pb-7.5;
     }
 
-    .qualificao > .formacao-card {
-        @apply gap-3 flex flex-col items-center;
+    #formacao-cards h2 {
+        @apply text-yellow-500 ;
     }
 
-    .qualificacao 
-    > .formacao-card 
-    > div {
-        @apply sm:hover:cursor-pointer sm:text-left flex flex-col items-center justify-center text-center sm:bg-slate-800 rounded-xl md:hover:bg-blue-800 bg-blue-800 transition duration-700 p-2 pb-6 sm:h-42.5 h-65;
-    } 
-
-    .formacao-card h3 {
-        @apply  text-2xl font-semibold;
+    #experiencia-cards h2 {
+        @apply text-blue-500 ;
     }
 
-    .formacao-container, .experiencia-container {
-        @apply bg-slate-800 sm:p-5 w-4/5 p-2.5 sm:w-2/3 sm:text-center;
+    div.experiencias {
+        @apply md:mb-20;
+    }
+    div.experiencias, div.formacoes {
+        @apply  flex flex-col md:items-start md:flex-row items-center/* flex-col md:flex-row flex justify-center md:justify-start md:items-start */;
     }
 
-    .formacao-card p {
-        @apply text-[14px] mt-3;
-    }
-   
-
-    .barra {
-        @apply h-1.5 bg-orange-600 w-15 m-auto sm:m-auto;
+    div.experiencia, div.formacao {
+        @apply rounded-[14px] border-2 flex flex-col gap-2 justify-center sm:justify-between items-center  md:basis-[321px] border-blue-900 h-60 md:w-[360px] w-8/10 sm:p-2 sm:pb-4 transition duration-600 md:cursor-pointer;
     }
 
+    .formacao {
+        @apply md:hover:bg-yellow-900 md:hover:border-yellow-900;
+    }
+
+    .experiencia {
+        @apply md:hover:bg-blue-900;
+    }
+
+    .experiencia h3, .experiencia i, 
+    .formacao h3, .formacao i {
+        @apply font-semibold text-2xl;
+    }
+
+    .experiencia i, .formacao i {
+        @apply font-bold text-3xl md:text-white;
+    }
+
+    .formacao i {
+        @apply text-yellow-600;
+    }
+
+    .experiencia i {
+        @apply text-blue-500;
+    }
+
+    .experiencia p, .formacao p {
+        @apply sm:p-2 text-center;
+    }
+
+    /** =========== Meus projectos ==============*/
     .card-projecto {
         @apply sm:basis-[320px] w-7/8 border border-orange-600;
     }
@@ -207,33 +239,10 @@
         @apply  hover:underline;
     }
 
-    
-
-    .titulo-secao {
-        @apply text-3xl font-semibold mb-2.5 text-center capitalize;
-    }
-
-    
-    
-
-
-
-    .qualificacoes {
-        @apply flex border-2 border-orange-600 p-5 gap-5 mb-5;
-    }
-
-    
-
-    
-
     .link {
         @apply text-orange-600 lg:hover:underline font-bold;
     }
-
-   
-
-   
-
+    
     .sumario {
         @apply: sm:hover:cursor-pointer;
     }

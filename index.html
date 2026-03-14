@@ -13,12 +13,12 @@
 <body class=" bg-slate-900 h-screen transition duration-700 text-white" onload="atualizarAno()">
     <main class="pb-20" id="home">
         <section class="h-screen bg-center bg-fixed" style="background-image: url(assets/images/fundos/fundo-13.jpg);">
-        <header class="heder-container">
+        <header class="header-container">
             <div class="logo-container">
                 <a href="#" class="logo-link "><h1>Josimar Martins</h1></a>
             </div>
     
-            <nav class="menu-nav" id="menu-container"> 
+            <nav class="menu-nav hidden" id="menu-container"> 
                 <ul class="lista">
                     <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#home">Home</a></li>
                     <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#sobre" >Sobre</a></li>
@@ -29,7 +29,7 @@
             </nav>
     
             <div class="whatsappp-cta-container">
-                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="whatsapp-cta">Whatsapp</a>
+                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="whatsapp-cta"> whatsapp </a>
             </div>
 
             <div id="menu-h-container">
@@ -72,7 +72,7 @@
                             <li><strong>Trabalhar / Prestar Serviço:</strong> <span  class="text-green-600">Disponível</span></li>
                         </ul>
                     </div>
-                    <a href="assets/pdf/cv/curriculo.pdf" class="cv-downlod" download="curriculo-josimar.pdf">Baixar CV</a>
+                    <a href="assets/pdf/cv/curriculo.pdf" id="cv-download" class="cv-downlod" download="curriculo-josimar.pdf">Baixar CV</a>
                 </div>
             </div>
         </section> <!-- Fim do sobre mim -->
@@ -162,38 +162,35 @@
             </div>
         </section> <!-- Depois da secção minhas skills -->
         <section class="conteiner qualificacoes-container" id="qualificacoes">
-            <p>Aqui estão as minhas qualificações</p>
             <h2 class="titulo-secao">Qualificações</h2>
 
             <div class="barra m-auto"></div>
-            <div class="qualificacoes">
-                <div id="formacao-container" class="qualificacao">
-                    <h2 id="titulo-academica-seccao">Trajetória Académica</h2>
+            <div id="experiencia-cards">
+                <h2>Trajectória Profissional</h2>
 
-                    <div class="formacao-card"> 
-                        <div class="formacao">
-                            <h3 class="experiencia-titulo">Ensino Médio de Informática</h3>
-                            <span>Colégio Mundo Novo 2022 - 2026</span>
+                <div class="experiencias">
+                    <div class="experiencia">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h3>Técnico de Redes</h3>
 
-                            <p class="paragrafo">
-                                Estou a cursar o último ano do curso técnico médio de informática no Colégio Mundo Novo, onde adquiri conhecimentos sólidos em diversas áreas da informática, incluindo programação, redes de computadores, entre outros.
-                            </p>
-                        </div>
+                        <p>
+                            Atuo como técnico de redes de computadores na QoS Tel, onde sou responsável pela instalação, configuração e manutenção de dispositivos de redes de computadores
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <div id="experiencia-conatiner" class="p-5 sm:pr-0">
-                    <h2 id="titulo-experiencia-seccao" class="py-5 text-2xl font-semibold  sm:text-left text-center">Trajetória Profissional</h2>
+            <div id="formacao-cards">
+                <h2>Trajectória Académica</h2>
 
-                    <div id="formacao-cards" class=" flex flex-col gap-3"> 
-                        <div class="formacao flex flex-col items-center justify-center sm:hover:cursor-pointer sm:text-left text-center sm:bg-slate-800 md:hover:bg-amber-800 bg-amber-800 transition duration-700  rounded-xl p-2 pb-6 sm:h-42.5 h-65">
-                            <h3 class="experiencia-titulo text-2xl font-semibold">Técnico de Redes de Computadores</h3>
-                            <span>QoS Tel 2023 - Presente</span>
+                <div class="formacoes">
+                    <div class="formacao">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Técnico de Informática</h3>
 
-                            <p class="paragrafo text-[14px] mt-3">
-                                Atuo como técnico de redes de computadores na QoS Tel, onde sou responsável pela instalação, configuração e manutenção de redes em ambientes residenciais e empresariais. Adquiri experiência prática na resolução de problemas de conectividade e suporte ao cliente.
-                            </p>
-                        </div>
+                        <p>
+                            Estou a cursar o último ano do curso técnico médio de informática no Colégio Mundo Novo, onde pude construir uma base sólida em computação.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -376,16 +373,17 @@
 
         <div>
             <ul class="lista text-3xl">
-                <li class=""><a href="https://www.linkedin.com/in/josemar-martins-89029b31a/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-linkedin"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/josemar-martins-89029b31a/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-linkedin"></i></a></li>
 
-                <li class=""><a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
+                <li>
+                    <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+            </li>
 
-                    <i class="fa-brands fa-square-whatsapp"></i>
-                </a></li>
+                <li><a href="https://www.instagram.com/josemar_martins21/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-instagram"></i></a></li>
 
-                <li class=""><a href="https://www.instagram.com/josemar_martins21/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700"><i class="fa-brands fa-square-instagram"></i></a></li>
-
-                <li class=""><a href="https://github.com/josemarmartins21" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
+                <li><a href="https://github.com/josemarmartins21" target="_blank" rel="noopener noreferrer" class="hover:text-orange-700">
                     <i class="fa-brands fa-github"></i>
                 </a></li>
             </ul>
