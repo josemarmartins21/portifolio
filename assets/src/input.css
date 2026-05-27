@@ -32,7 +32,7 @@
     
     /* Lista de links */
     .lista {
-        @apply flex gap-4 flex-col sm:flex-row sm:justify-center; 
+        @apply flex gap-4 flex-col sm:flex-row sm:flex-wrap sm:justify-center; 
     }
 
     /* =============== Mobile Menu =========================== */
@@ -133,18 +133,18 @@
     .card-skill {
         @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
 
-        .title-skill {
-            @apply  font-semibold my-1.5 text-2xl;
-        }
-
-        .icone {
-            @apply text-5xl text-orange-600;
-
-                 i {
-                    @apply sm:transition sm:hover:text-white sm:duration-600 sm:ease-in-out;
-                }
-        }
     }
+    .card-skill .title-skill {
+        @apply  font-semibold my-1.5 text-2xl;
+    }
+
+    .card-skill .icone {
+        @apply text-5xl text-orange-600;
+
+    }
+    .card-skill .icone i {
+       @apply sm:transition sm:hover:text-white sm:duration-600 sm:ease-in-out;
+   }
 
     .porcentagem {
         @apply h-1 bg-orange-600 mt-1.5;
