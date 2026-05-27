@@ -1,6 +1,6 @@
 Estou a cursar o último ano do curso técnico médio de informática no Colégio Mundo Novo, onde adquiri conhecimentos sólidos em diversas áreas da informática, incluindo programação, redes de computadores, entre outros.
 
-
+***
 
 ## Experiencia
 
