@@ -16,22 +16,47 @@
         <section class="h-screen bg-center bg-fixed" style="background-image: url(assets/images/fundos/fundo-13.jpg);">
         <header class="header-container">
             <div class="logo-container">
-                <a href="#" class="logo-link "><h1>Josimar Martins</h1></a>
+                <a href="#" class="logo-link leading-8"><h1>Josimar Martins</h1></a>
             </div>
     
             <nav class="menu-nav hidden" id="menu-container"> 
-                <ul class="lista">
-                    <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#home">Home</a></li>
-                    <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#sobre" >Sobre</a></li>
-                    <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#skills">Minhas Skills</a></li>
-                    <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#qualificacoes">Qualificações</a></li>
-                    <li class="font-title text-[14px] sm:text-[16px] sm:font-sans"><a href="#projectos">Projectos</a></li>
+                <ul class="lista-menu">
+                    <li class="mb-2.5 sm:mb-0 sm:hover:underline  text-[17px] sm:text-[16px] sm:font-sans">
+                        <a href="#home">
+                            <i class="fa-solid fa-hashtag cardinal"></i> Home
+                        </a>
+                    </li>
+                    <li class="mb-2.5sm:mb-0 sm:hover:underline  text-[17px] sm:text-[16px] sm:font-sans">
+                        <a href="#sobre" >
+                            <i class="fa-solid fa-hashtag cardinal"></i> Sobre
+                        </a>
+                    </li>
+                    <li class="mb-2.5sm:mb-0 sm:hover:underline  text-[17px] sm:text-[16px] sm:font-sans">
+                        <a href="#skills">
+                            <i class="fa-solid fa-hashtag cardinal"></i> Minhas Skills
+                        </a>
+
+                    </li>
+                    <li class="mb-2.5 sm:mb-0 sm:hover:underline text-[17px] sm:text-[16px] sm:font-sans">
+                        <a href="#qualificacoes">
+                            <i class="fa-solid fa-hashtag cardinal"></i> Qualificações
+                        </a>
+                    </li>
+                    <li class="mb-2.5 sm:mb-0 sm:hover:underline text-[17px] sm:text-[16px] sm:font-sans">
+                        <a href="#projectos">
+                            <i class="fa-solid fa-hashtag cardinal"></i> Projectos
+                        </a>
+                    </li>
                 </ul>
+
+                 <div id="cta-container">
+                    <a  class="cta-btn" href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" target="_blank">Fale Comigo</a>
+                </div>   
             </nav>
     
-            <div class="whatsappp-cta-container">
-                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="whatsapp-cta"> whatsapp </a>
-            </div>
+                <a href="https://wa.me/244940121011?text=Estou%20interessado%20nos%20seus%20servi%C3%A7os" class="floating-button bg-green-600" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>     
+                </a>
 
             <div id="menu-h-container">
                 <i class="fa-solid fa-bars text-xl" id="menu"></i>
@@ -202,15 +227,49 @@
             <div class="mt-5">
                 <div class="flex py-5 sm:items-start gap-5 items-center  flex-col sm:flex-row sm:flex-wrap">
                     <div class="card-projecto">
-                        <a href="#">
-                            <img src="assets/images/projects/portfolio.png" alt="Projecto portfolio" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        <a href="https://github.com/josemarmartins21/qos-dashboard" target="_blank">
+                            <img src="assets/images/projects/qos-dashboard.png" alt="Projecto portfolio" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
                         </a>
                         <div class="p-2.5">
-                            <h3 class="title-project"><a href="#" class="link-project">Projecto Portfólio</a></h3>
+                            <h3 class="title-project"><a href="https://github.com/josemarmartins21/qos-dashboard" class="link-project" target="_blank">QoS Tel CMS</a></h3>
                             <details>
                                 <summary class="sumario">Descrição</summary>
                                 <p>
-                                    Projecto de um portfolio desenvolvido no último modúlo do curso de HTML5 e CSS3 do Curso em Video.
+                                    CMS para gerênciamento de conteúdo do site da QoS Tel, desenvolvido utilizando PHP (Laravel) e MySQL. Ele permite que os administradores do site criem, editem e excluam páginas, posts e outros tipos de conteúdo de forma fácil e intuitiva.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="card-projecto">
+                        <a href="https://qostel.co.ao/"  target="_blank">
+                            <img src="assets/images/projects/qos-tel.png" alt="Projecto QoS Tel" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project">
+                                <a href="https://qostel.co.ao/" class="link-project" target="_blank">
+                                    QoS Tel Landing Page
+                                </a>
+                            </h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Landing Page desenvolvida para a QoS Tel. Ela é totalmente responsiva e otimizada para ser executada em qualquer dispositivo com um navegador web.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="card-projecto">
+                        <a href="https://github.com/josemarmartins21/StockFlow"  target="_blank">
+                            <img src="assets/images/projects/stockflow.png" alt="Projecto de gestão de estoque" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
+                        </a>
+                        <div class="p-2.5">
+                            <h3 class="title-project"><a href="https://github.com/josemarmartins21/StockFlow" class="link-project" target="_blank">StockFlow</a></h3>
+                            <details>
+                                <summary class="sumario">Descrição</summary>
+                                <p>
+                                    Projecto de gestão de estoque de um bar voltado para venda de bebidas alcoólicas, refrigerantes, canabis entre outros.
                                 </p>
                             </details>
                         </div>
@@ -232,20 +291,6 @@
                     </div>
 
                     <div class="card-projecto">
-                        <a href="https://github.com/josemarmartins21/StockFlow"  target="_blank">
-                            <img src="assets/images/projects/stockflow.png" alt="Projecto de gestão de estoque" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
-                        </a>
-                        <div class="p-2.5">
-                            <h3 class="title-project"><a href="https://github.com/josemarmartins21/StockFlow" class="link-project" target="_blank">StockFlow</a></h3>
-                            <details>
-                                <summary class="sumario">Descrição</summary>
-                                <p>
-                                    Projecto de gestão de estoque de um bar voltado para venda de bebidas alcoólicas, refrigerantes, canabis entre outros.
-                                </p>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="card-projecto">
                         <a href="https://josemarmartins21.github.io/projecto-android/"  target="_blank">
                             <img src="assets/images/projects/projecto-android.png" alt="Projecto Android" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
                         </a>
@@ -260,21 +305,7 @@
                         </div>
                     </div>
                     <div class="card-projecto">
-                        <a href="https://josemarmartins21.github.io/qos-tel-landing-page/"  target="_blank">
-                            <img src="assets/images/projects/qos-tel.png" alt="Projecto QoS Tel" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
-                        </a>
-                        <div class="p-2.5">
-                            <h3 class="title-project"><a href="https://josemarmartins21.github.io/qos-tel-landing-page/" class="link-project" target="_blank">QoS Tel Landing Page</a></h3>
-                            <details>
-                                <summary class="sumario">Descrição</summary>
-                                <p>
-                                    Landing Page desenvolvida para a QoS Tel. Ela é totalmente responsiva e otimizada para ser executada em qualquer dispositivo com um navegador web.
-                                </p>
-                            </details>
-                        </div>
-                    </div>
-                    <div class="card-projecto">
-                        <a href=""  target="_blank">
+                        <a href="https://josemarmartins21.github.io/xbox-consoles"  target="_blank">
                             <img src="assets/images/projects/xbox.png" alt="Xbox" class="aspect-video md:hover:brightness-70 md:hover:cursor-pointer transition duration-700">
                         </a>
                         <div class="p-2.5">

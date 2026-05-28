@@ -14,7 +14,7 @@
 
     /*================ HEADER ===========================*/
     .header-container {
-        @apply sm:flex bg-slate-900 sm:bg-transparent text-white grid items-start grid-cols-2 grid-rows-1 sm:flex-wrap sm:justify-between gap-2.5 sm:gap-5  p-6 sm:items-center;
+        @apply sm:flex bg-slate-900 sm:bg-transparent text-white grid items-start grid-cols-2 grid-rows-1 sm:flex-wrap sm:justify-between gap-2.5 sm:gap-5  p-6 sm:items-center absolute top-0 left-0 w-full z-50 sm:static;
     }
 
     .logo-container {
@@ -31,8 +31,12 @@
     }  
     
     /* Lista de links */
-    .lista {
-        @apply flex gap-4 flex-col sm:flex-row sm:flex-wrap sm:justify-center; 
+    .lista-menu {
+        @apply flex gap-4 flex-col sm:items-center sm:flex-row sm:flex-wrap justify-center py-3.5; 
+    }
+
+    a.cta-btn {
+        @apply bg-green-900 block  m-auto w-20/20 p-3 text-center text-white font-bold rounded-lg transition duration-500 transform active:scale-75 md:active:scale-none sm:hidden;
     }
 
     /* =============== Mobile Menu =========================== */
@@ -42,7 +46,7 @@
     /* =============== MODBILE DETALHE FIM ==================*/
     /* DISCLAIMER MINI AUTO INTRODUÇÃO */
     .disclaimer-container {
-        @apply h-3/5 flex items-center justify-center flex-col sm:pt-0 pt-20;
+        @apply h-4/5 flex items-center justify-center flex-col sm:pt-0 pt-20 sm:pt-0;
     }
 
     .disclaimer-container .self-image {
@@ -61,12 +65,14 @@
         @apply text-xl text-shadow-black text-shadow-2xs;
     }
 
-    .whatsappp-cta-container {
-        @apply hidden sm:inline-flex;
+
+    /* ============ BOTÃO FLUTUANTE LATERAL ====================*/
+    .floating-button {
+        @apply fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center font-bold text-white transition duration-500 transform shadow-lg hover:shadow-xl active:scale-90 z-50 animate-pulse text-3xl p-5;
     }
 
-    .whatsappp-cta-container a.whatsapp-cta {
-        @apply animate-pulse font-bold transition bg-green-700 rounded-xl w-40 py-2 text-center inline-block transform active:scale-75 duration-500 md:block;
+    .floating-button:hover {
+        @apply scale-110;
     }
 
     /* ============= FIM DO HERO ====================*/
@@ -245,6 +251,11 @@
     
     .sumario {
         @apply: sm:hover:cursor-pointer;
+    }
+
+    /** RODAPE ***/
+    .lista {
+        @apply flex flex-row gap-4 justify-center items-center;
     }
 }
 
