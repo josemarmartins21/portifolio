@@ -68,7 +68,7 @@
 
     /* ============ BOTÃO FLUTUANTE LATERAL ====================*/
     .floating-button {
-        @apply fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center font-bold text-white transition duration-500 transform shadow-lg hover:shadow-xl active:scale-90 z-50 animate-pulse text-3xl p-5;
+        @apply animate-ping fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center font-bold text-white transition duration-500 transform shadow-lg hover:shadow-xl active:scale-90 z-50 animate-pulse text-3xl p-5;
     }
 
     .floating-button:hover {
