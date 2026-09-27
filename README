@@ -14,5 +14,3 @@ npx @tailwindcss/cli -i ./assets/src/input.css -o ./assets/src/output.css --watc
 ## Tecnológias Utilizadas
 - Tailwind CSS
 - JavaScript
-
-

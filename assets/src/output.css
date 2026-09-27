@@ -19,7 +19,6 @@
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-zinc-400: oklch(70.5% 0.015 286.067);
-    --color-zinc-900: oklch(21% 0.006 285.885);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -47,6 +46,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-title: 'Boldonse', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
   }
 }
 @layer base {
@@ -288,6 +288,9 @@
   .text-center {
     text-align: center;
   }
+  .font-body {
+    font-family: var(--font-body);
+  }
   .font-title {
     font-family: var(--font-title);
   }
@@ -318,9 +321,6 @@
   }
   .capitalize {
     text-transform: capitalize;
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -401,24 +401,6 @@
       }
     }
   }
-  .sm\:hover\:text-zinc-400 {
-    @media (width >= 40rem) {
-      &:hover {
-        @media (hover: hover) {
-          color: var(--color-zinc-400);
-        }
-      }
-    }
-  }
-  .sm\:hover\:text-zinc-900 {
-    @media (width >= 40rem) {
-      &:hover {
-        @media (hover: hover) {
-          color: var(--color-zinc-900);
-        }
-      }
-    }
-  }
   .sm\:hover\:underline {
     @media (width >= 40rem) {
       &:hover {
@@ -448,6 +430,7 @@
     }
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @layer {
   .barra {
@@ -460,13 +443,20 @@
     }
   }
   .titulo-secao {
+    margin-bottom: calc(var(--spacing) * 2);
     margin-bottom: calc(var(--spacing) * 2.5);
     text-align: center;
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+    --tw-leading: calc(var(--spacing) * 7.5);
+    line-height: calc(var(--spacing) * 7.5);
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     text-transform: capitalize;
+    @media (width >= 40rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
   }
   .header-container {
     position: absolute;
@@ -684,7 +674,7 @@
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .sobre-mim-container {
-    margin-bottom: calc(var(--spacing) * 15);
+    margin-bottom: calc(var(--spacing) * 35);
     background-color: var(--color-slate-800);
     padding: calc(var(--spacing) * 5);
   }
@@ -794,6 +784,9 @@
     --tw-leading: calc(var(--spacing) * 7.5);
     line-height: calc(var(--spacing) * 7.5);
   }
+  .info p {
+    color: var(--color-zinc-400);
+  }
   .cv-downlod {
     margin-top: calc(var(--spacing) * 2);
     display: inline-block;
@@ -842,9 +835,6 @@
     gap: calc(var(--spacing) * 7.5);
     padding-block: calc(var(--spacing) * 7.5);
     @media (width >= 40rem) {
-      margin: auto;
-    }
-    @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 7.5);
     }
     @media (width >= 40rem) {
@@ -869,9 +859,9 @@
   .card-skill {
     display: flex;
     height: calc(var(--spacing) * 62.5);
-    width: calc(4/5 * 100%);
+    width: calc(9/10 * 100%);
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--color-slate-800);
     padding: calc(var(--spacing) * 5);
     text-align: center;
@@ -888,7 +878,7 @@
       height: calc(var(--spacing) * 62.5);
     }
     @media (width >= 40rem) {
-      flex-basis: calc(3/10 * 100%);
+      flex-basis: calc(5/12 * 100%);
     }
     @media (width >= 40rem) {
       --tw-duration: 600ms;
@@ -969,6 +959,7 @@
     }
   }
   .qualificacoes-container .barra {
+    margin-top: calc(var(--spacing) * 7.5);
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 6);
     }
@@ -1009,11 +1000,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: calc(var(--spacing) * 3);
     @media (width >= 48rem) {
       flex-direction: row;
     }
     @media (width >= 48rem) {
       align-items: flex-start;
+    }
+    @media (width >= 48rem) {
+      justify-content: space-around;
+    }
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 5);
     }
   }
   div.experiencia, div.formacao {
@@ -1037,16 +1035,10 @@
       justify-content: space-between;
     }
     @media (width >= 40rem) {
-      padding: calc(var(--spacing) * 2);
-    }
-    @media (width >= 40rem) {
-      padding-bottom: calc(var(--spacing) * 4);
+      padding-block: calc(var(--spacing) * 6);
     }
     @media (width >= 48rem) {
       width: 360px;
-    }
-    @media (width >= 48rem) {
-      flex-basis: 321px;
     }
     @media (width >= 48rem) {
       cursor: pointer;

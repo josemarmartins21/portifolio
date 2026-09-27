@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @layer {
@@ -9,7 +10,7 @@
     }
     
     .titulo-secao {
-        @apply text-3xl font-semibold mb-2.5 text-center capitalize;
+        @apply text-4xl mb-2 sm:text-5xl leading-7.5 font-semibold mb-2.5 text-center capitalize;
     }
 
     /*================ HEADER ===========================*/
@@ -18,7 +19,7 @@
     }
 
     .logo-container {
-        @apply col-span-[200px];
+        @apply col-span-[200px];    
     }
 
     .logo-container a.logo-link {
@@ -68,7 +69,7 @@
 
     /* ============ BOTÃO FLUTUANTE LATERAL ====================*/
     .floating-button {
-        @apply animate-ping fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center font-bold text-white transition duration-500 transform shadow-lg hover:shadow-xl active:scale-90 z-50 animate-pulse text-3xl p-5;
+        @apply fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center font-bold text-white transition duration-500 transform shadow-lg hover:shadow-xl active:scale-90 z-50 animate-pulse text-3xl p-5;
     }
 
     .floating-button:hover {
@@ -81,7 +82,7 @@
     /* =========== SOBRE MIM SECTION ==========================*/
 
     .sobre-mim-container {
-        @apply mb-15 p-5 bg-slate-800;
+        @apply mb-35 p-5 bg-slate-800;
     }
 
     .sobre-mim-sub {
@@ -121,6 +122,9 @@
         @apply leading-7.5;
     }
 
+    .info p {
+        @apply text-zinc-400;
+    }
     /** == CV DOWNLOAD === */
     .cv-downlod {
         @apply w-40 py-2 md:hover:scale-105 bg-orange-600  text-center inline-block mt-2 transform active:scale-75 md:active:scale-none transition duration-500;
@@ -132,12 +136,12 @@
     }
 
     .skills-container {
-        @apply sm:mt-7.5 flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap   gap-7.5 sm:m-auto sm:gap-x-10 sm:items-stretch items-center py-7.5;
+        @apply sm:mt-7.5 flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap   gap-7.5  sm:gap-x-10 sm:items-stretch items-center py-7.5;
     }
 
     /* ====== CARD SKILLS ===== */
     .card-skill {
-        @apply bg-slate-800 flex flex-col justify-between sm:basis-3/10 w-4/5 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
+        @apply bg-slate-800 flex flex-col justify-center sm:basis-5/12 w-9/10 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
 
     }
     .card-skill .title-skill {
@@ -172,7 +176,7 @@
     }
 
     .qualificacoes-container .barra {
-        @apply md:mb-6;
+        @apply md:mb-6 mt-7.5;
     }
 
     #qualificacoes {
@@ -196,11 +200,11 @@
         @apply md:mb-20;
     }
     div.experiencias, div.formacoes {
-        @apply  flex flex-col md:items-start md:flex-row items-center/* flex-col md:flex-row flex justify-center md:justify-start md:items-start */;
+        @apply  flex flex-col md:items-start md:flex-row md:justify-around items-center gap-3 lg:gap-5 /* flex-col md:flex-row flex justify-center md:justify-start md:items-start */;
     }
 
     div.experiencia, div.formacao {
-        @apply rounded-[14px] border-2 flex flex-col gap-2 justify-center sm:justify-between items-center  md:basis-[321px] border-blue-900 h-60 md:w-[360px] w-8/10 sm:p-2 sm:pb-4 transition duration-600 md:cursor-pointer;
+        @apply rounded-[14px] border-2 flex flex-col gap-2 justify-center sm:justify-between items-center border-blue-900 h-60 md:w-[360px] w-8/10 sm:py-6 transition duration-600 md:cursor-pointer;
     }
 
     .formacao {
@@ -261,4 +265,5 @@
 
 @theme {
     --font-title: 'Boldonse', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
 }
