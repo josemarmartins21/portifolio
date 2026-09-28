@@ -410,6 +410,11 @@
       }
     }
   }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
   .md\:hover\:cursor-pointer {
     @media (width >= 48rem) {
       &:hover {
@@ -432,6 +437,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
 @layer {
   .barra {
     margin: auto;
@@ -831,6 +840,7 @@
   .skills-container {
     display: flex;
     flex-direction: column-reverse;
+    flex-wrap: wrap;
     align-items: center;
     gap: calc(var(--spacing) * 7.5);
     padding-block: calc(var(--spacing) * 7.5);
@@ -838,13 +848,7 @@
       margin-top: calc(var(--spacing) * 7.5);
     }
     @media (width >= 40rem) {
-      width: calc(7/8 * 100%);
-    }
-    @media (width >= 40rem) {
-      flex-direction: row;
-    }
-    @media (width >= 40rem) {
-      flex-wrap: wrap;
+      width: var(--container-md);
     }
     @media (width >= 40rem) {
       align-items: stretch;
@@ -852,8 +856,11 @@
     @media (width >= 40rem) {
       column-gap: calc(var(--spacing) * 10);
     }
-    @media (width >= 64rem) {
-      align-items: flex-start;
+    @media (width >= 48rem) {
+      display: grid;
+    }
+    @media (width >= 48rem) {
+      grid-template-columns: 321px 321px 321px;
     }
   }
   .card-skill {
@@ -862,6 +869,7 @@
     width: calc(9/10 * 100%);
     flex-direction: column;
     justify-content: center;
+    border-radius: 14px;
     background-color: var(--color-slate-800);
     padding: calc(var(--spacing) * 5);
     text-align: center;
@@ -974,10 +982,14 @@
     padding-top: calc(var(--spacing) * 7.5);
     padding-bottom: calc(var(--spacing) * 7.5);
     text-align: center;
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+    @media (width >= 40rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 10);
     }
@@ -1070,10 +1082,14 @@
     }
   }
   .experiencia h3, .experiencia i, .formacao h3, .formacao i {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
   }
   .experiencia i, .formacao i {
     font-size: var(--text-3xl);

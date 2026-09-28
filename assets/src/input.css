@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
 @layer {
     /*=============== Generals ============*/
     .barra {
@@ -47,7 +52,7 @@
     /* =============== MODBILE DETALHE FIM ==================*/
     /* DISCLAIMER MINI AUTO INTRODUÇÃO */
     .disclaimer-container {
-        @apply h-4/5 flex items-center justify-center flex-col sm:pt-0 pt-20 sm:pt-0;
+        @apply h-4/5 flex items-center justify-center flex-col pt-20 sm:pt-0;
     }
 
     .disclaimer-container .self-image {
@@ -136,12 +141,12 @@
     }
 
     .skills-container {
-        @apply sm:mt-7.5 flex flex-col-reverse sm:flex-row sm:w-7/8 lg:items-start  sm:flex-wrap   gap-7.5  sm:gap-x-10 sm:items-stretch items-center py-7.5;
+        @apply sm:mt-7.5 flex flex-col-reverse sm:w-md md:grid md:grid-cols-[321px_321px_321px] flex-wrap gap-7.5  sm:gap-x-10 sm:items-stretch items-center py-7.5;
     }
 
     /* ====== CARD SKILLS ===== */
     .card-skill {
-        @apply bg-slate-800 flex flex-col justify-center sm:basis-5/12 w-9/10 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
+        @apply bg-slate-800 rounded-[14px] flex flex-col justify-center sm:basis-5/12 w-9/10 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
 
     }
     .card-skill .title-skill {
@@ -185,7 +190,7 @@
 
     /**================ Experiencia Profissional && Formação Académica ================== */
     #experiencia-cards h2, #formacao-cards h2 {
-        @apply text-3xl font-bold md:text-center text-center md:pb-10 pt-7.5 pb-7.5;
+        @apply text-2xl sm:text-3xl font-bold md:text-center text-center md:pb-10 pt-7.5 pb-7.5;
     }
 
     #formacao-cards h2 {
@@ -217,7 +222,7 @@
 
     .experiencia h3, .experiencia i, 
     .formacao h3, .formacao i {
-        @apply font-semibold text-2xl;
+        @apply font-semibold text-xl sm:text-2xl;
     }
 
     .experiencia i, .formacao i {
