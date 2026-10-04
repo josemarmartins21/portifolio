@@ -97,9 +97,82 @@ function atualizarIdade() {
 }
 
 /**
+ * Inicialização e Filtro das Skills por Categoria
+ */
+function inicializarFiltroSkills() {
+    const filterButtons = document.querySelectorAll('.skill-filter-btn')
+    const categoryGroups = document.querySelectorAll('.skills-category-group')
+
+    if (!filterButtons.length || !categoryGroups.length) return
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter')
+
+            // Atualiza classe ativa dos botões
+            filterButtons.forEach(b => b.classList.remove('active'))
+            btn.classList.add('active')
+
+            // Filtra os grupos com efeito suave
+            categoryGroups.forEach(group => {
+                const category = group.getAttribute('data-category')
+                if (filter === 'all' || category === filter) {
+                    group.classList.remove('hidden')
+                    group.style.opacity = '0'
+                    setTimeout(() => {
+                        group.style.opacity = '1'
+                    }, 50)
+                } else {
+                    group.classList.add('hidden')
+                }
+            })
+        })
+    })
+}
+
+/**
+ * Alternar texto "Ver mais" / "Ver menos" na seção Sobre Mim
+ */
+function inicializarVerMaisSobre() {
+    const btnVerMais = document.getElementById('btn-ver-mais-sobre')
+    const textoExpandido = document.getElementById('sobre-texto-expandido')
+    const reticencias = document.getElementById('sobre-reticencias')
+    const textoBtn = document.getElementById('btn-ver-mais-texto')
+    const iconeBtn = document.getElementById('btn-ver-mais-icone')
+
+    if (!btnVerMais || !textoExpandido) return
+
+    btnVerMais.addEventListener('click', () => {
+        const estaOculto = textoExpandido.classList.contains('hidden')
+
+        if (estaOculto) {
+            textoExpandido.classList.remove('hidden')
+            textoExpandido.style.opacity = '0'
+            setTimeout(() => {
+                textoExpandido.style.opacity = '1'
+            }, 30)
+            if (reticencias) reticencias.classList.add('hidden')
+            if (textoBtn) textoBtn.textContent = 'Ver menos'
+            if (iconeBtn) iconeBtn.classList.add('rotate-180')
+        } else {
+            textoExpandido.classList.add('hidden')
+            if (reticencias) reticencias.classList.remove('hidden')
+            if (textoBtn) textoBtn.textContent = 'Ver mais'
+            if (iconeBtn) iconeBtn.classList.remove('rotate-180')
+        }
+    })
+}
+
+// Inicia após carregamento do DOM
+document.addEventListener('DOMContentLoaded', () => {
+    atualizarIdade()
+    inicializarFiltroSkills()
+    inicializarVerMaisSobre()
+})
+
+/**
  * Debugador
  */
 function dd(v) {
     console.log(v)
-    
 }

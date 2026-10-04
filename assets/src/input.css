@@ -115,8 +115,12 @@ html {
         @apply h-1.5 bg-orange-600 w-15;
     }
 
-    .sobre-details > p {
+    .sobre-details p {
         @apply my-2.5 text-zinc-400 leading-7.5;
+    }
+
+    #btn-ver-mais-sobre {
+        @apply text-orange-500 font-semibold cursor-pointer mb-2 inline-flex items-center gap-1.5 transition duration-300 md:hover:text-orange-400 select-none;
     }
 
     /* === MINHAS CODERNADAS ====*/ 
@@ -140,33 +144,93 @@ html {
         @apply sm:w-250 m-auto;
     }
 
+    .skills-filter-container {
+        @apply flex flex-wrap justify-center items-center gap-2.5 sm:gap-4 mt-8 mb-10 px-4;
+    }
+
+    .skill-filter-btn {
+        @apply px-5 py-2 rounded-full text-sm sm:text-base font-medium transition duration-300 border border-slate-700 bg-slate-800/80 text-zinc-300 md:hover:text-white md:hover:border-orange-500 md:hover:bg-slate-800 cursor-pointer;
+    }
+
+    .skill-filter-btn.active {
+        @apply bg-orange-600 border-orange-500 text-white shadow-lg shadow-orange-600/30 font-semibold;
+    }
+
+    .skills-category-group {
+        @apply transition-all duration-500 ease-in-out;
+    }
+
+    .skills-category-header {
+        @apply flex items-center justify-between flex-wrap gap-3 pb-3 mb-6 border-b border-slate-700/70;
+    }
+
+    .skills-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center;
+    }
+
     .skills-container {
-        @apply sm:mt-7.5 flex flex-col-reverse sm:w-md md:grid md:grid-cols-[321px_321px_321px] flex-wrap gap-7.5  sm:gap-x-10 sm:items-stretch items-center py-7.5;
+        @apply sm:mt-7.5 flex flex-col sm:w-md md:grid md:grid-cols-[321px_321px_321px] flex-wrap gap-7.5 sm:gap-x-10 sm:items-stretch items-center py-7.5;
     }
 
     /* ====== CARD SKILLS ===== */
     .card-skill {
-        @apply bg-slate-800 rounded-[14px] flex flex-col justify-center sm:basis-5/12 w-9/10 sm:h-62.5  p-5 h-62.5 text-center transition sm:duration-600 sm:hover:scale-110 sm:ease-in-out active:scale-75 md:active:scale-none;
-
+        @apply bg-slate-800 border border-slate-700/50 rounded-[14px] flex flex-col justify-between w-full max-w-[340px] p-6 min-h-[260px] text-center transition duration-500 md:hover:border-orange-500/60 md:hover:-translate-y-1.5 md:hover:shadow-xl md:hover:shadow-orange-600/10;
     }
+
     .card-skill .title-skill {
-        @apply  font-semibold my-1.5 text-2xl;
+        @apply font-semibold my-1.5 text-2xl text-white;
     }
 
     .card-skill .icone {
-        @apply text-5xl text-orange-600;
-
+        @apply text-5xl text-orange-600 flex items-center justify-center h-14;
     }
-    .card-skill .icone i {
-       @apply sm:transition sm:hover:text-white sm:duration-600 sm:ease-in-out;
-   }
+
+    .card-skill .icone i,
+    .card-skill .icone svg {
+        @apply transition duration-500 md:hover:text-white md:hover:scale-110;
+    }
+
+    .card-skill .info p {
+        @apply text-zinc-400 text-sm leading-relaxed min-h-[42px] mt-1;
+    }
+
+    .bar-wrapper {
+        @apply w-full bg-slate-700/60 rounded-full h-1.5 mt-2 overflow-hidden;
+    }
 
     .porcentagem {
-        @apply h-1 bg-orange-600 mt-1.5;
+        @apply h-full bg-orange-600 rounded-full transition-all duration-700;
     }
 
     .rate-skill {
-        @apply block w-full text-right;
+        @apply block w-full text-right text-xs text-orange-400 font-semibold mt-2;
+    }
+
+    /* Desativar hover e sticky-hover em qualquer dispositivo touch/móvel */
+    @media (hover: none), (pointer: coarse) {
+        .card-skill {
+            transform: none !important;
+            box-shadow: none !important;
+            border-color: rgb(51 65 85 / 0.5) !important;
+        }
+
+        .card-skill:hover {
+            transform: none !important;
+            box-shadow: none !important;
+            border-color: rgb(51 65 85 / 0.5) !important;
+        }
+
+        .card-skill .icone i:hover,
+        .card-skill .icone svg:hover {
+            color: inherit !important;
+            transform: none !important;
+        }
+
+        .skill-filter-btn:not(.active):hover {
+            background-color: rgb(30 41 59 / 0.8) !important;
+            color: rgb(212 212 216) !important;
+            border-color: rgb(51 65 85) !important;
+        }
     }
 
     /**======= FIM CARD SKILL ========== **/

@@ -81,13 +81,25 @@
                 <div class="sobre-details"> 
                     <h2>Sobre mim</h2>
                     <div class="sobre-barra"></div>
-                    <p>
-                        Sou formado em Técnico Médio de Informática, com experiência em redes de computadores e desenvolvimento de software. Possuo experiência na instalação e manutenção de infraestruturas de rede em ambientes residenciais e empresariais, incluindo organizações de grande dimensão como a Lilás e o Shopping Hoji Ya Henda, além da configuração de antenas de rede (Tenda e MikroTik) e roteadores de diversas marcas.
-                    </p>
+                    
+                    <div class="sobre-texto-wrapper my-2.5">
+                        <p>
+                            Sou formado em Técnico Médio de Informática, com experiência em redes de computadores e desenvolvimento de software. Possuo experiência na instalação e manutenção de infraestruturas de rede em ambientes residenciais e empresariais, incluindo organizações de grande dimensão como a Lilás e o Shopping Hoji Ya Henda, além da configuração de antenas de rede (Tenda e MikroTik) e roteadores de diversas marcas.<span id="sobre-reticencias">...</span>
+                        </p>
 
-                    <p>
-                        Atualmente, realizo um estágio remoto em desenvolvimento de software na <strong><a href="https://eclipsesolutions.ao/" target="_blank" rel="external" class="link">Eclipse Solutions</a></strong>, onde venho aprofundando os meus conhecimentos na área de programação e engenharia de software. Possuo também experiência no desenvolvimento web, incluindo a criação de websites para ISP e sistemas de gestão para pequenos negócios, como uma solução de gestão de estoque para bares.
-                    </p>
+                        <div id="sobre-texto-expandido" class="hidden transition-opacity duration-500 mt-2.5">
+                            <p>
+                                Atualmente, realizo um estágio remoto em desenvolvimento de software na <strong><a href="https://eclipsesolutions.ao/" target="_blank" rel="external" class="link">Eclipse Solutions</a></strong>, onde venho aprofundando os meus conhecimentos na área de programação e engenharia de software. Possuo também experiência no desenvolvimento web, incluindo a criação de websites para ISP e sistemas de gestão para pequenos negócios, como uma solução de gestão de estoque para bares.
+                            </p>
+                        </div>
+
+                        <div class="mt-1">
+                            <button type="button" id="btn-ver-mais-sobre" class="text-orange-500 font-semibold cursor-pointer inline-flex items-center gap-1.5 transition duration-300 md:hover:text-orange-400 select-none">
+                                <span id="btn-ver-mais-texto">Ver mais</span>
+                                <i id="btn-ver-mais-icone" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
                     <div class="coodernadas-container">
                         <ul class="info-container">
                             <li><strong>Nome:</strong> Josimar Martins</li>
@@ -105,87 +117,222 @@
                 </div>
             </div>
         </section> <!-- Fim do sobre mim -->
-        <section class="conteiner pb-25" id="skills">
+
+        <section class="conteiner mt-20 sm:mt-32 pb-25 px-4 sm:px-6" id="skills">
             <h2 class="titulo-secao">Minhas Skills</h2>
             <div class="barra"></div>
+            <p class="text-center text-zinc-400 mt-4 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                Competências técnicas estruturadas por domínio, unindo desenvolvimento web moderno, engenharia backend, ferramentas essenciais de integração e inteligência artificial.
+            </p>
 
-            <div class="skills-container">
-                <div class="card-skill">
-                    <div class="icone">
-                        <a href="https://git-scm.com/docs/git/pt_BR" target="_blank"><i class="fa-brands fa-github icone "></i></a>
+            <!-- Filtros Interativos por Categoria -->
+            <div class="skills-filter-container">
+                <button type="button" class="skill-filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-layer-group mr-1.5"></i> Todas as Skills
+                </button>
+                <button type="button" class="skill-filter-btn" data-filter="tecnologias">
+                    <i class="fa-solid fa-code mr-1.5"></i> Tecnologias & Frameworks
+                </button>
+                <button type="button" class="skill-filter-btn" data-filter="ferramentas">
+                    <i class="fa-solid fa-screwdriver-wrench mr-1.5"></i> Ferramentas & IA
+                </button>
+            </div>
+
+            <div class="skills-category-wrapper space-y-12">
+                <!-- Categoria 1: Tecnologias & Frameworks -->
+                <div class="skills-category-group" data-category="tecnologias">
+                    <div class="skills-category-header">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-lg bg-orange-600/10 border border-orange-500/20 text-orange-500 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-code"></i>
+                            </span>
+                            <div>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white">Tecnologias & Frameworks</h3>
+                                <p class="text-xs sm:text-sm text-zinc-400">Linguagens de programação, estilização moderna e bancos de dados</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-orange-400 border border-orange-500/30">
+                            6 competências
+                        </span>
                     </div>
-                    <div class="info">
-                        <h3 class="title-skill">Git</a></h3>
-                        <p>
-                           Git é um sistema de controle de versão distribuído (DVCS) de código aberto
-                        </p>
-                        <span class="rate-skill">50%</span>
-                        <div class="porcentagem w-2/4"></div> 
+
+                    <div class="skills-grid">
+                        <!-- HTML5 -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer" title="Documentação HTML5">
+                                    <i class="fa-brands fa-html5"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill"><abbr title="HyperText Markup Language" class="no-underline">HTML5</abbr></h3>
+                                <p>Linguagem de marcação para estruturação semântica, acessibilidade e conteúdo de páginas web.</p>
+                                <span class="rate-skill">90%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-[90%]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tailwind CSS (substituindo CSS) -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" title="Documentação Tailwind CSS">
+                                    <svg class="w-12 h-12 fill-current" viewBox="0 0 24 24" role="img" aria-label="Tailwind CSS">
+                                        <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill">Tailwind CSS</h3>
+                                <p>Framework CSS utility-first para criação ágil de interfaces responsivas e de alta performance visual.</p>
+                                <span class="rate-skill">85%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-[85%]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript (adicionado) -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" title="Documentação JavaScript">
+                                    <i class="fa-brands fa-square-js"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill">JavaScript</h3>
+                                <p>Linguagem de programação essencial para interatividade web dinâmica, manipulação do DOM e integrações.</p>
+                                <span class="rate-skill">75%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-3/4"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PHP -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://www.php.net/manual/pt_BR/index.php" target="_blank" rel="noopener noreferrer" title="Documentação PHP">
+                                    <i class="fa-brands fa-php"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill"><abbr title="PHP: Hypertext Preprocessor" class="no-underline">PHP</abbr></h3>
+                                <p>Linguagem de programação server-side para construção de lógicas de negócio, regras e APIs robustas.</p>
+                                <span class="rate-skill">80%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-4/5"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Laravel -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://laravel.com/docs/12.x/installation" target="_blank" rel="noopener noreferrer" title="Documentação Laravel">
+                                    <i class="fa-brands fa-laravel"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill">Laravel</h3>
+                                <p>Framework PHP moderno projetado para simplificar, organizar e acelerar o desenvolvimento de aplicações web e APIs.</p>
+                                <span class="rate-skill">60%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-3/5"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MySQL -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://dev.mysql.com/doc/" target="_blank" rel="noopener noreferrer" title="Documentação MySQL">
+                                    <i class="fa-solid fa-database"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill"><abbr title="Structured Query Language" class="no-underline">MySQL</abbr></h3>
+                                <p>Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) para armazenamento seguro e consultas SQL.</p>
+                                <span class="rate-skill">80%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-4/5"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-skill">
-                    <div class="icone">
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><i class="fa-brands fa-html5 icone "></i></a>
+
+                <!-- Categoria 2: Ferramentas & Inteligência Artificial -->
+                <div class="skills-category-group" data-category="ferramentas">
+                    <div class="skills-category-header">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-lg bg-orange-600/10 border border-orange-500/20 text-orange-500 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </span>
+                            <div>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white">Ferramentas & Inteligência Artificial</h3>
+                                <p class="text-xs sm:text-sm text-zinc-400">Controle de versão colaborativo, testes de endpoints de API e técnicas avançadas de IA</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-orange-400 border border-orange-500/30">
+                            3 competências
+                        </span>
                     </div>
-                    <div class="info">
-                        <h3 class="title-skill"><abbr title="HyperText Markup Language">HTML</abbr></h3>
-                        <p>
-                            HTML é a linguagem de marcação padrão para criar a estrutura e o conteúdo de páginas web
-                        </p>
-                          <span class="rate-skill">90%</span>
-                        <div class="porcentagem w-4/5"></div> 
-                    </div>
-                </div>
-                <div class="card-skill">
-                    <div class="icone">
-                        <a href="https://www.php.net/manual/pt_BR/index.php" target="_blank"><i class="fa-brands fa-php icone "></i></a>
-                    </div>
-                    <div class="info">
-                        <h3 class="title-skill"><abbr title="PHP Hypertext Preprocessor">PHP</abbr></h3>
-                        <p>
-                            PHP é uma linguagem de programação de código aberto, server-side (lado do servidor)
-                        </p>
-                          <span class="rate-skill">80%</span>
-                        <div class="porcentagem w-4/5"></div> 
-                    </div>
-                </div>
-                <div class="card-skill">
-                    <div class="icone">
-                        <a href="https://dev.mysql.com/doc/" target="_blank"><i class="fa-solid fa-database "></i></a>
-                    </div>
-                    <div class="info">
-                        <h3 class="title-skill"><abbr title="Structured Query Language">MySQL</abbr></h3>
-                        <p>
-                            MySQL é um Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) de código aberto
-                        </p>
-                          <span class="rate-skill">80%</span>
-                        <div class="porcentagem w-4/5"></div> 
-                    </div>
-                </div>
-                <div class="card-skill">
-                    <div class="icone">
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank"><i class="fa-brands fa-css3-alt "></i></a>
-                    </div>
-                    <div class="info">
-                        <h3 class="title-skill"><abbr title="Cascading Style Sheets">CSS</abbr></h3>
-                        <p>
-                            Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web
-                        </p>
-                          <span class="rate-skill">60%</span>
-                        <div class="porcentagem w-3/5"></div> 
-                    </div>
-                </div>
-                <div class="card-skill">
-                    <div class="icone">
-                        <a href="https://laravel.com/docs/12.x/installation" target="_blank"><i class="fa-brands fa-laravel "></i></a>
-                    </div>
-                    <div class="info">
-                        <h3 class="title-skill">Laravel</h3>
-                        <p>
-                            O Laravel é um framework PHP projetado para simplificar e acelerar o desenvolvimento de aplicações web
-                        </p>
-                          <span class="rate-skill">50%</span>
-                        <div class="porcentagem w-2/4"></div> 
+
+                    <div class="skills-grid">
+                        <!-- Git & GitHub -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://git-scm.com/docs/git/pt_BR" target="_blank" rel="noopener noreferrer" title="Documentação Git">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill">Git & GitHub</h3>
+                                <p>Sistema de controle de versão distribuído para rastreamento de código, ramificação e colaboração contínua.</p>
+                                <span class="rate-skill">65%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-[65%]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Postman (adicionado) -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer" title="Plataforma Postman">
+                                    <svg class="w-12 h-12 fill-current" viewBox="0 0 32 32" role="img" aria-label="Postman">
+                                        <path d="M19.167 4.28a7.042 7.042 0 0 0-4.04 1.258l-6.848-4.24a.833.833 0 0 0-1.144.258.837.837 0 0 0 .256 1.146l6.837 4.234a7.065 7.065 0 0 0-1.393 3.992c0 .285.02.564.053.84l-4.708 1.942a4.938 4.938 0 0 0-2.002-1.637.834.834 0 0 0-1.092.427.834.834 0 0 0 .428 1.092c.62.247 1.135.7 1.463 1.272l-4.646 1.916a.834.834 0 0 0-.448 1.084.834.834 0 0 0 1.084.448l4.783-1.972c.404.757 1.07 1.344 1.884 1.638a4.957 4.957 0 0 0 3.754-.25l7.986 6.307a.833.833 0 0 0 1.16-.134.834.834 0 0 0-.134-1.16l-7.85-6.2c.465-.923.633-1.996.44-3.076l4.636-1.912a7.03 7.03 0 0 0 3.391.875 7.07 7.07 0 1 0 0-14.137zm0 12.47a5.404 5.404 0 1 1 0-10.805 5.404 5.404 0 0 1 0 10.805z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill">Postman</h3>
+                                <p>Ferramenta líder para desenvolvimento, testes de requisições HTTP, validação e documentação de APIs RESTful.</p>
+                                <span class="rate-skill">75%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-3/4"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Engenharia de Prompt (adicionado) -->
+                        <div class="card-skill">
+                            <div class="icone">
+                                <a href="https://www.promptingguide.ai/pt" target="_blank" rel="noopener noreferrer" title="Guia de Engenharia de Prompt">
+                                    <i class="fa-solid fa-brain"></i>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <h3 class="title-skill">Engenharia de Prompt</h3>
+                                <p>Engenharia de contexto e formulação de instruções precisas para direcionamento de LLMs na aceleração do ciclo de desenvolvimento.</p>
+                                <span class="rate-skill">85%</span>
+                                <div class="bar-wrapper">
+                                    <div class="porcentagem w-[85%]"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
